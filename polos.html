@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POLOS | Herliz Confecciones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(135deg, #2196F3, #9C27B0);
+      color: white;
+      padding-top: 100px;
+      padding-bottom: 60px;
+      overflow-x: hidden;
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 999;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding: 10px 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .boton {
+      flex: 0 0 auto;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid #4CAF50;
+      padding: 10px 18px;
+      margin: 6px;
+      font-size: 1em;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      animation: fadeInUp 1s ease;
+    }
+
+    .boton:hover {
+      background: #4CAF50;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      animation: fadeInDown 1.2s ease-out;
+    }
+
+    header h1 {
+      font-size: 2.4em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px #00000070;
+    }
+
+    .descripcion {
+      max-width: 800px;
+      margin: 20px auto;
+      background: rgba(255,255,255,0.1);
+      padding: 20px 30px;
+      border-radius: 15px;
+      line-height: 1.7em;
+      box-shadow: 0 0 12px rgba(255,255,255,0.2);
+      animation: zoomIn 1s ease;
+    }
+
+    .descripcion h2 {
+      color: #000000;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .descripcion ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .descripcion li::before {
+      content: "👕 ";
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .marco {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+      animation: zoomIn 0.8s ease;
+    }
+
+    .marco img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(255,255,255,0.3);
+      transition: 0.3s ease;
+    }
+
+    .marco img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    }
+
+    .volver {
+      display: inline-block;
+      margin: 50px auto 0;
+      text-align: center;
+      background-color: white;
+      color: #2196F3;
+      padding: 14px 36px;
+      border-radius: 12px;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      animation: fadeInUp 1s ease;
+    }
+
+    .volver:hover {
+      background-color: #2196F3;
+      color: white;
+      transform: scale(1.08);
+      box-shadow: 0 0 10px white;
+    }
+
+    footer {
+      background-color: rgba(0,0,0,0.2);
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 0.9em;
+      margin-top: 50px;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    @media screen and (max-width: 600px) {
+      .boton {
+        font-size: 0.9em;
+        padding: 8px 14px;
+      }
+
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .volver {
+        font-size: 1em;
+        padding: 10px 24px;
+      }
+      
+    }
+    #Centro {
+
+      
+        text-align: center;
+
+
+    }
+    
+  </style>
+</head>
+<body>
+
+
+  <div class="menu">
+    <a class="boton" href="producto.html">🏠 INICIO</a>
+    <a class="boton" href="polos.html">POLOS</a>
+    <a class="boton" href="pantalones.html">PANTALONES</a>
+    <a class="boton" href="chalecos.html">CHALECOS</a>
+    <a class="boton" href="mamelucos.html">MAMELUCOS</a>
+    <a class="boton" href="gorros.html">GORROS</a>
+    <a class="boton" href="camisa.html">CAMISAS</a>
+    <a class="boton" href="casacas.html">CASACAS</a>
+    <a class="boton" href="mochilas.html">MOCHILAS</a>
+    <a class="boton" href="mandiles.html">MANDILES</a>
+    <a class="boton" href="bolsos.html">BOLSOS</a>
+    <a class="boton" href="vestidos.html">TRAJES</a>
+    <a class="boton" href="nosotros.html">NOSOTROS</a>
+    <a class="boton" href="contactos.html">CONTACTOS</a>
+  </div>
+
+  <header>
+    <h1>👕 POLOS DE CALIDAD y Camiseros</h1>
+  </header>
+
+  <section class="descripcion">
+    <h2>Modelos disponibles:</h2>
+    <ul>
+      <li>༘💭˚ෆAlgodón Pima</li>
+      <li>༘💭˚ෆAlgodón Jersey 20/1</li>
+      <li>༘💭˚ෆAlgodón Jersey 30/1</li>
+      <li>༘💭˚ෆBody Policotón</li>
+    </ul>
+    <p style="text-align:center; margin-top:10px;">📦 Pedidos a partir de docena (12 unidades)</p>
+  </section>
+      <h1 id="Centro">POLOS,PUBLICITARIOS, MANGA LARGAS</h1>
+  <section class="galeria">
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/508464177_1343444807563895_7275933910668266656_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG1IyRzBXtkscsqAkKnaB94r3JK2V8L10yvckrZXwvXTJQddx1aJK6yx0Drs75ya4lUH0wvcVW6oj5xDQO360nu&_nc_ohc=A1NO-EhvkjEQ7kNvwHxvOab&_nc_oc=AdmDxwSN4kCSqCxYKwSgQz66FJC5jUP-eFQnoCpVmC1BohUvAM9ygwvS6X4O9LZHoeA&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=jbuW3ViSFcz_6qajBa-5Zw&oh=00_AfRMTgUKFLOwLAitI3_Oo701FjSQh12_JZ8PAa3Y7CsasA&oe=687DF32E" alt="👕Polo Algodón Pima">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/502376139_1343444834230559_1496538369569688828_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHk4YZGF2qDDnezSjqM-GA3dS_Ae52FIZR1L8B7nYUhlNCUWw_LGkFpI0xiAj0gx-1XjkmGa8ZzaZ4BQIYQyyWC&_nc_ohc=fCvnYH0zf4IQ7kNvwHORbE9&_nc_oc=AdmaXiePJAowlvr69PT8MabuXSANvxJieq-W4KHN1svX5PSt8-owArQHZ8993iSnDbQ&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=J9MOnUpL1g0rzOcQExQnkw&oh=00_AfTZw4EF0lXldRod3ti-5H8iBB6Yn91gFYGktqN6LlOSyw&oe=687E2FE2" alt="👕Polo Jersey 20/1">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/499469023_1343444780897231_1697782112713767987_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEqYJUVCY6WDaa-vCEre1mdLWh7NFdGDngtaHs0V0YOeANvidVuO6C2hYDn4TDjZP418_PcHfQiSAPi5c8fiuVx&_nc_ohc=33y4LbEMtoEQ7kNvwHVms4s&_nc_oc=AdkepbK4N9glhbdJAD3f1HnjxNiWAZgTwWjFZz5RmVoC9UVWb9S5jG-b8n0wpXirFJM&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=kf6-kODn_e26EIZ_ownd8A&oh=00_AfQxCuJ67pckhZk_pxHpo84CqAVcqe0mBO6Ucpg9Ib0OGg&oe=687E118B" alt="👕Polo Jersey 30/1">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/502572043_1343444714230571_7192043415607039739_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGFBBGe_P-RfN9fY_lAIpy_mH2jVXjYuQuYfaNVeNi5CyTY8HO2EmTgiFpabfKnYSsenelQRVgG94yLxIc2JoM-&_nc_ohc=A6l0ul25CMoQ7kNvwG6cmxf&_nc_oc=Adl-K-5mWE3tfMkKiRrbc39rJjW_jNfRledFWHX78APIORb3zjkfHPSsMfoWTk7Hxlo&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=gTeu4L-QQfkVG3vmgZImew&oh=00_AfQEmz6C7-nIcPe_QlXg1rOB5-mkn92H_Ed2ZqytN5Xz9A&oe=687E2524" alt="👕Polo policotón">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/492004391_1343444754230567_7740471014853106055_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGaoVdE-WkanqMekZ_0vOu-j2CNWdMchYGPYI1Z0xyFgTV8B_7p3lliw45R54QHOpcPa1GMqKCqppFMxuEVTZZQ&_nc_ohc=3ysu3NEk9V8Q7kNvwGZCIJa&_nc_oc=AdmS-uhOrXuv8pN7JPTMeg73P4uMWBF1FHISagV-GaUqHjdRhysvB57aLfZRsAuTKD8&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=jbuW3ViSFcz_6qajBa-5Zw&oh=00_AfTPcy7WncIhRI8yr6-ibto-7KNjRoRFc9IIvXGj-4RD5w&oe=687E056E" alt="Polo policoton">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/494037246_1298160915425618_2368870953692557418_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH2UjXCKZX9DsNp9dC7oEiU9q2HvoQTRtD2rYe-hBNG0K7mGdKbG-lrimsv8v6vxEsXHpebzKqHMbjQMVJU07_q&_nc_ohc=1aVelZYcKAgQ7kNvwGbVk4Y&_nc_oc=AdmMpcL0XBUxRrRKfZnUbzKgBnro0ensrQGIS4vyiTFMo8VVImOfiknWtUr_kzIIv3rsTRCsG-Mk1rpEzCFb_SMa&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=WmcYE2ZngmRTU8G6VEMK9A&oh=00_AfQXz567qfSL_05x4g4EcqtXNVj7-JuhiSKpI2mYwa8fAA&oe=68804B52" alt="polo">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/493669938_1298160885425621_849243264507389804_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGHLPFhEmQFHyp2AwPBxeS7CyrQZmpgvi0LKtBmamC-LaMVc_YUBgmrZykvYUhXkLyerTDV7bw50GkV_PXyHaJy&_nc_ohc=WzZzczqKS5YQ7kNvwG8neNy&_nc_oc=AdnwDIeLh8fUDIdkGPHfPvJhLL_3lDkX8Df2epKlklStHavpo7SwQ2jmE5FQuGrU_c-x-Xj6uJr_CFr9YL1hkt7y&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=B8NBV77AenA_ruR5IadhjA&oh=00_AfQpkti5VYun1v-hniS8AXt3YZEVvsvsFGG4Bvr-RGGE5g&oe=68804698" alt="polo">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/493346303_1298160898758953_6955533402361149262_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGJwlINhdzIjja8ZyLOT5-ocaB-3zMWOTNxoH7fMxY5M_leKi0eUNljLTUQHWDTVSrPUjbZWjoq-eO9ai59Xcp7&_nc_ohc=zL_QjbBMndQQ7kNvwHoY2PQ&_nc_oc=AdnDEoXbMFl1jNQMOQ_Q4UFduBrUeGXtKtH0Zxc7PY3YhuRPJgLH6RzlC4jisTo_mqgd39wwMWVOpzDzQVtUVFDM&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=Wex4ksJZrCwzVLt1fJtWVQ&oh=00_AfR6iHR1Hmw5MhL92PtfttGcCvtWSit6Jo6KmvFmOm2P2Q&oe=68804F98 " alt="polo">
+    </div>
+       <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/493273450_1298160932092283_7969594688831884081_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFDUOC42kkvaKBLKZwDtkAC_4aqbqGZvk3_hqpuoZm-TWrHz9uK2oBOtfYl189UJAReLWeaTHO-oxCxQk1y9hB0&_nc_ohc=c9Bi7__x6-wQ7kNvwFAjt_U&_nc_oc=Adl29NnMltKfDCqX-zkMaZa7IAcUGGz3xZqBSWWi_CVJBc6OjAeELje2AOnzqZMF0UuZEza4ZrJ1MgY2fAvesRb0&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=n2l_N6BgnKEON7fLs_YrEQ&oh=00_AfSzqbODPbkVJxtdLaaRgXftH4pwovkobgr2TXLCfYfJxw&oe=68804478 " alt="polo">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/492178176_1294060352502341_1249817023013465355_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFgzZy1JeIniLQXVevrPDIHjHpbItRUO2SMelsi1FQ7ZGQlrwWkjgh83KSaFRnQRRGFQH1JtX8q3GZZvn5efvg0&_nc_ohc=jey9IY91ljsQ7kNvwGnNxFp&_nc_oc=AdkxjFK80Z2kQPO69k97G41T--cb3NeP8m6E2VwIZjvlBZRBlPzcgXzZrtQAKitrrMW7HX4JClYHGXHVVSKO6OPK&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=3AjyGlHXf45FlFmhvJ1hYA&oh=00_AfSBg3sz7WflNRyoT4Lh5KixGKV-9EDyXqIsQcluSsBEbQ&oe=6880329D " alt="polo">
+    </div>
+      <div class="marco">
+      <img src=" https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/492494790_1294059599169083_5751882192667065108_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEQwAOxLgrE4dQDz0InP_N1L6_95SxCj70vr_3lLEKPvReqKowyKbx3kEk1zzrdNbmfPc-r97M5whRAk5XXECVp&_nc_ohc=mcYO-p0BtvcQ7kNvwE-83fb&_nc_oc=AdmZukD688CCYZJXJQAZ9D0eaFCzPUPV6r4gNg4gNVNa5FCPiB2VRIIN1_G_ljvbMIGhn6jLK5lc7rI4XqXS7GMc&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=K5zX4eDyCQId3-Pxl8Eitw&oh=00_AfSBQURUV_TkVTq6CBrOvZR_CrwakhRUsqxA766G0Z6DKA&oe=6880391D" alt="polo">
+    </div>
+      <div class="marco">
+      <img src=" https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/491657973_1289154536326256_5473360683269784693_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHOpNGlasIclaiK0bWrzbILjN9XiYIxg06M31eJgjGDThE2el7LG93P9J4gwb2QeD2nFci6ZRMXhe_QNOCcCp31&_nc_ohc=brHbmyxTqQAQ7kNvwFKik_O&_nc_oc=AdkiqclECcDVeuSz1t-rRDFyTfv4UD5DHvWgebf9Q4CwktbkTMbo_IlAqvezFEtAS_7kgnNJL1MOwDqmaRBDoAAP&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=MGnbiUsiS21FC-RO2Wplvw&oh=00_AfTayRCJgmvvBWRB0jAfxiS8mUho50B6h9KnvjrrJohvgQ&oe=688048F4" alt="polo">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/491973854_1289154622992914_8807303920770291076_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHdITmsKUeBK1anjDp7ZRlS1c7-rsYmt7DVzv6uxia3sHlnQsCmkIkw303lOGk8RrcV10hRf7h4829O4NGGpRoP&_nc_ohc=LVmM7Zlh1MsQ7kNvwFYjZnt&_nc_oc=AdknJ5s098xEhPtKE6DIHW07nRO_12thVMU0rjHeCGLd_1DXOUQ_3pdljeQX-GJkJc4xFUSAB7vyRxoKxmC2MtgU&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=MGnbiUsiS21FC-RO2Wplvw&oh=00_AfTkitLvO2BXLg08L9ept_w_QBJLcON4GyuYJD5xBtTyjA&oe=68803873 " alt="polo">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/491785601_1288765906365119_4923303478306721614_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEs7XG6at-2fsMJpeWIxSQprGEDfUAChTusYQN9QAKFOxvN9j9rI5XDmyxYwdL59vKRcTtBbg3OFQtj1GIIXoW0&_nc_ohc=fru2pKOsOrYQ7kNvwHc268j&_nc_oc=AdlMghuMFErTCL-KL6WCu3IeCWdJvPet2i7MHWJCb2PqQUzoVcOYF48uSJ_ow7juCUbuBL2gfkBEpRS2yBRAS6qT&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=SHtiZyqIQLuES_2LHSXnfw&oh=00_AfT4a_6Dtu53y030aAeskap8gFT0aqe03WX4O-cbsv8OGw&oe=68806649 " alt="polo">
+    </div>
+      <div class="marco">
+      <img src=" https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/491904162_1287948366446873_7573331247301853361_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE_aKL0nyERbSAxktKbkB1MZdqaIHnTgx5l2pogedODHjkf5aWiNAQe0YdJggI3i5jPiEeYYVGujv-c6JKGqhp9&_nc_ohc=v3R3GUk55eAQ7kNvwERBfit&_nc_oc=Adk-Ymsp_DWN2p_NTKT29jMWIbYFa2GhJvCUmH7hsT3r9nDG8WYchHgQnUdTPqYXOchjU7qKPSsYPWJLk-6Wqs4Q&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=2u78Wk-ZlLi2Io6CyDtNLw&oh=00_AfSr9uACPu10hJ1oPtkWlYnGCt_REtkVf4iUgH6TMSN6jg&oe=6880660D" alt="polo">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/490710542_1287037359871307_4102048164243194812_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFNRBiyI2NaVFGvlGjvDQn5wCC7JuCTgQ3AILsm4JOBDUnz9GwUk7foUf-JXBVwlXJLnj8izPJHaZH57BeLgxQO&_nc_ohc=5mbieGLQ-R0Q7kNvwEnxngU&_nc_oc=AdkdvaclB0_mJ342PYL8l5mHIz2z5NAKQ8F54OD1jZzPPfthIkAGlsV8i3jGTCgX5504aovCCQM4UjWz7FFMMW4P&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=QrXPBD2eVxDSei4De0LHgA&oh=00_AfS6nRb92gFfvWrInS1N1eUAsFgwCwiowXVnJaLxx2EYjA&oe=688034DC " alt="polo">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/490727358_1287037406537969_4856397575370638216_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFMh5xfa5Fh3X99y0zfFDEDTCo8c15G_iVMKjxzXkb-JbSwNXNQdanvEr73nmalfFb-gvbREU4OjopCNMcWU3Ba&_nc_ohc=7h2L78uvAWgQ7kNvwH4l36W&_nc_oc=Adm4ghWvrE5sx_EqhwZVtf2yzP3IFcvsEmHC4leiq1EVfOTCOGVqInlDaYM-tWbrAToCNWow2GV03Br47UgZAC6u&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=zm9OI2E9koFvN023wNj8Pw&oh=00_AfT_mLbjMFPZkSLEDW7sux8tJN5YsrSrQKBRW1w9dZzuXw&oe=68804895 " alt="polo">
+    </div>
+     </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/490732862_1286768139898229_2662663623627716669_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFtlvRAvw3k4Pwiw4PKue-vtafjEUI_LPW1p-MRQj8s9ZYa0X-Nt_zWxCwFgD7fHeTsGwtQ4DQzowBjWMHdTkBr&_nc_ohc=C1J6z0jwJiMQ7kNvwGsq3hH&_nc_oc=AdnlQayI7ENHYMqXzRM3aoi7gNPIu4xaEgMEWXoQ8HFY0onix1sH90zIb5QP99DpJwFmvYeu8nfzbrEFWcYEpiiJ&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=QrXPBD2eVxDSei4De0LHgA&oh=00_AfSr1nEbjwI9r34-jLjlEH3KQmNs_7Xulz9_KYc4Z4blGA&oe=6880483F " alt="polo">
+    </div>
+     </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/489828519_1286768133231563_6429019646109049361_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEEBBRHNgguH6zxLKAZzhVHNioxObG4u082KjE5sbi7T-V1qiKktI3g1cnzJyyOGFXi0SzFUKI5Jr8xL7wgGdfp&_nc_ohc=tOrqSMH9EeQQ7kNvwGoC_pS&_nc_oc=Admf9dQpIqB8LM3RI4pr9S-rVtzAkZ04DkDxV1V2wUAp8V8npqKb7frcmrUXuLrI_dWPHSRAjMpmtWEiffW_oNI-&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=QrXPBD2eVxDSei4De0LHgA&oh=00_AfRnz03e30XMANYFITf1haDQPU39S3TvcUW6uqR-f-CsXg&oe=688059B6 " alt="polo">
+    </div>
+     </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/490885378_1286229116618798_8012265898845284288_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFxwFd_dGGQdtekdpEUMmQ8zPUvrrhuWlvM9S-uuG5aW8ZRL1LsDVujyIgNgJwAeDu1BKS8eMPkH74A7EYJ223K&_nc_ohc=2OIeS2YKqr4Q7kNvwGqNTJZ&_nc_oc=Adn5-7fGI_Lq-TmNffU7kGCHmym14TG-4SQQCBXSp4eohtNLoxjE0SKCyVAJAmUdMFdSbcCsX03rPuRBqtSbMX__&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=PTMo153uGXy57IqUutXDZw&oh=00_AfSlhyTMbr79OFRRqv-b1wU6772J9qQqfjmM2KXfEHZwag&oe=6880471E " alt="polo">
+    </div>
+     </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/491773116_1286220479952995_2955197214712445668_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHy7HIburAfZUJy5iYi1u4z7hYN8p44J2ruFg3ynjgnavpyY2EU2yMUFuB5JG8IRI7xy8SL6ZoKQQGKNVUd3zb-&_nc_ohc=Bc672gXMtUoQ7kNvwGt2HDX&_nc_oc=AdmKl80M_6eAC21ww2HvG3DbFGdFzsiPTnNKWrmqKvVskc-wWnXHk28YIQXRRyfel2C0lozl9T-rvydvQyP3bHx4&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=PcejwfDbFjjCYCf-J2r9-g&oh=00_AfSP_WLJgO5OTVqEw1d0z6WkSe30bahMwA4366W6poX7Dw&oe=68805734 " alt="polo">
+    </div>
+     </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/491595444_1286220723286304_6167853294182574874_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE-3Ga780UoNEn-JetX9fORXU_zBIXV7TxdT_MEhdXtPCxfP5TJaGSUpUE5v0VRG738BXkEZZDilZ8WFzpxesFr&_nc_ohc=BM2cUbZvqmcQ7kNvwFZm6QL&_nc_oc=AdlkKffGJ0CkQa8MDb5t-2VfxK7pddxL-2mlvfBf_fsPYMM2Qb2oUc8noHoTnUZAM7ZrP4Uy4YfE3GoUqlz6li21&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=PcejwfDbFjjCYCf-J2r9-g&oh=00_AfSXACFId0Kmhvcsb0IGNJN0TqEPOlJfoaY-PQh-dJUmSw&oe=6880459B " alt="polo">
+    </div>
+     </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/490663052_1286041503304226_291242303404915130_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFroJNE0k9h_efzsd61U8opecjcfDwEzap5yNx8PATNqtw4vUx6sWX8fEkZttUhHez185t-YYkCAjV8csjfOFBK&_nc_ohc=S6YnxlF5bHwQ7kNvwFSx-CC&_nc_oc=AdlsbXvw2lvJRBwttEOVgzlpTKyMrq8FFcO-BE5QKxl9H1Ae68uwEda4WBGhoK9USEsTGNTxdwU5jikn-pt7MfmY&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=PcejwfDbFjjCYCf-J2r9-g&oh=00_AfTHjx8PnEvQ08DFFGwD52IiRtcQrvgR0Uap9N346iWrmw&oe=68804A04 " alt="polo">
+    </div>
+     </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/490808967_1285907049984338_5855329170290050429_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEsJ0z3sJCHnz5nakEbjpErPqkkHUp39EE-qSQdSnf0Qa4qAl7PCx_hXwUMaNS7CmpqKvzti_17fycTO-TZ51R0&_nc_ohc=mm3EpAwTLy8Q7kNvwFY6Jik&_nc_oc=Adk8CwA60NCEWNvZavh-EoPO08hA7f5SMsWvRGHBt86GU7Zz2x_TX0FOCkNRnbk0WaxKr8gOONv8NgamIfpGl6hD&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=NK8j3KodLKR0_Rmg-6xdcg&oh=00_AfQIpDnAZQcdMtMFx89Q3lJhRT_YS7Xv2OjduejmOAwChA&oe=68803B24 " alt="polo">
+    </div>
+     </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/490485409_1285906963317680_3409227228868288470_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGl2qmZP3erXc0iD5Ye3g1cE8btgb0GBJgTxu2BvQYEmLOn-xrxQ6TH2DvGIAOo0A94KksguEkuE7s3E1PDsD9O&_nc_ohc=BWD3h-RpNq8Q7kNvwHar77H&_nc_oc=Adkd1osYCOTV-GT6F2GQ5JwRLytjTjyHZfnvaWstingjsMOecpzYGtyWYEG6SwizFsJ_W5Frd2S_jG_HwL-NuW-X&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=NK8j3KodLKR0_Rmg-6xdcg&oh=00_AfThgSWTJNqcJYoMKrzQenrglbPbMfB6B4uNo85o22ZBQw&oe=6880337F " alt="polo">
+    </div>
+     </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/490944507_1284693940105649_1807179997873044418_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFmVh8SwN9QvusvMDr0Zm0FcdhLEtR55kZx2EsS1HnmRraGQdjT_5PZf3oUeGc2pihjXafnJ5CEbWHvtj5gO1Ww&_nc_ohc=0XdKj8P-f_AQ7kNvwGOoEea&_nc_oc=AdkOF0lCHyPru7p7jHp4JMNC8z9Swk-RAt34wBUxzZ1bynGIUlonhtsQZNCUyv4cjHNPfz9x1nhRrRSy7RrlcKeh&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=7JWT2-NO1B41MLGhct3nqA&oh=00_AfSYUNhYPcYyrJfnD_MjgPqW1TYHCJrsDBHK0tPgujc4Ng&oe=68803678 " alt="polo">
+    </div>
+     </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/481073791_1248443440397366_2565174369058102940_n.jpg?stp=dst-jpg_p565x565_tt6&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFw_fqtL3Y_O8o9NNXCU6uERveoVLxXa_xG96hUvFdr_EJ6zm6wIRET9OSeWV3uXaVwPG-iTkHXergWiPfMNyYz&_nc_ohc=PBYKzG9PAs8Q7kNvwGwdRTZ&_nc_oc=Adkdh_1wGaj1JyW5F1Hw_YfG9mc0xwAxk3Jp-gR9En2PhyC3xMqIKklC9sPN9tnIRI2K-oDwQ8dQwhTzWtwESXCQ&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=xlsijI9HvXQCVdsNcbDHxg&oh=00_AfR9cCwvUAwseVY1wm-_1kX0mNmHFFxlxqktBGqWCa-sVQ&oe=688036B5 " alt="polo">
+    </div>
+     </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/482271545_9294830903946815_192093194145107277_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGTG7kU4XG7dp1QxcexpKmiMX403YC20wAxfjTdgLbTABmA9o17ke1kNQdGnIlSbSOciXmm0UaKr__IX1BJyGS-&_nc_ohc=dyFigl5qbSUQ7kNvwHJ_u7U&_nc_oc=Adk4-0evRvLu9--MrnfFMHbUK3yn-tIwXVGXLB9r-RWJrfzJRGtwE7hJ_AM981pWxm3juMl9OPVOPy_7GCeV2RSO&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=6v0dFwVjljE_haW62ljtaQ&oh=00_AfRNodHEP1phbV4y0jHCCNRkKmF0VpPALGoD4k-H3iyVUw&oe=688049CB " alt="polo">
+    </div>
+     </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/473618170_8990781601018415_4546181288217125148_n.jpg?stp=dst-jpg_p526x395_tt6&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGT1qRjMrjSWo-hPHAsKHR3-l8pzuXKInT6XynO5coidAnZmwqh1aAwNoAKJxH3JxyGHSQLv6Uy3_ZpLDmS-VsD&_nc_ohc=z-8rOBhzLuQQ7kNvwF1jZSI&_nc_oc=AdlvnroV9tqdjU47uwH4qvECok-Igr4lpNwZRQoRZMhIGUk3r4F75ahmcjALrpIPnwBtsmlZrheANMBZDkqaBn95&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=YOwbT4XdM9Jgvj-CSTHSyw&oh=00_AfQLjO04PUrk_7cVIn6sXN1K8PcqdmEREZa0qC-ZPbl0lQ&oe=688067D5 " alt="polo">
+    </div>
+     </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/473618960_8990781587685083_4319839821136873236_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHr6WLYAZbpdv7hRKpP1GeiyZBSsIlTxxbJkFKwiVPHFjPZ-rATH2Th3ftSPwDWGq48y-4g6kSKFyNfqCZtkdQw&_nc_ohc=jlU7te5QohwQ7kNvwF0qADB&_nc_oc=AdmYLqUMlShIdtaxpzllziE3_VHqhBKKKoq34DisqxaqgjH09z1ybSi6wfhULI7kDrYANtxLVk8I4EYbjEo51axY&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=YOwbT4XdM9Jgvj-CSTHSyw&oh=00_AfTaIAzwQyH_gzD7fWhCvCMHIlKmCSAHlUMGKY1fs58eIg&oe=688053A3 " alt="polo">
+    </div>
+
+  </section>
+
+  <div style="text-align: center;">
+    <a class="volver" href="producto.html">← Volver a categorías</a>
+  </div>
+
+  <footer>
+    HERLIZ CONFECCIONES | confecciones.herliz@gmail.com | 📞 963 382 211
+    <br>
+    Jr. Gamarra N° 1010 - 2do. Piso Tienda 205 – Gamarra – La Victoria
+  </footer>
+
+</body>
+</html>

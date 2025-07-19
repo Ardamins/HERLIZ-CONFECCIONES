@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CASACAS | Herliz Confecciones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(135deg, #2196F3, #9C27B0);
+      color: white;
+      padding-top: 100px;
+      padding-bottom: 60px;
+      overflow-x: hidden;
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 999;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding: 10px 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .boton {
+      flex: 0 0 auto;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid #4CAF50;
+      padding: 10px 18px;
+      margin: 6px;
+      font-size: 1em;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      animation: fadeInUp 1s ease;
+    }
+
+    .boton:hover {
+      background: #4CAF50;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      animation: fadeInDown 1.2s ease-out;
+    }
+
+    header h1 {
+      font-size: 2.4em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px #00000070;
+    }
+
+    .descripcion {
+      max-width: 800px;
+      margin: 20px auto;
+      background: rgba(255,255,255,0.1);
+      padding: 20px 30px;
+      border-radius: 15px;
+      line-height: 1.7em;
+      box-shadow: 0 0 12px rgba(255,255,255,0.2);
+      animation: zoomIn 1s ease;
+    }
+
+    .descripcion h2 {
+      color: #000000;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .descripcion li::before {
+      content: "🧥 ";
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .marco {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+      animation: zoomIn 0.8s ease;
+    }
+
+    .marco img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(255,255,255,0.3);
+      transition: 0.3s ease;
+    }
+
+    .marco img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    }
+
+    .volver {
+      display: inline-block;
+      margin: 50px auto 0;
+      text-align: center;
+      background-color: white;
+      color: #2196F3;
+      padding: 14px 36px;
+      border-radius: 12px;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      animation: fadeInUp 1s ease;
+    }
+
+    .volver:hover {
+      background-color: #2196F3;
+      color: white;
+      transform: scale(1.08);
+      box-shadow: 0 0 10px white;
+    }
+
+    footer {
+      background-color: rgba(0,0,0,0.2);
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 0.9em;
+      margin-top: 50px;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    @media screen and (max-width: 600px) {
+      .boton {
+        font-size: 0.9em;
+        padding: 8px 14px;
+      }
+
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .volver {
+        font-size: 1em;
+        padding: 10px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu">
+    <a class="boton" href="producto.html">🏠 INICIO</a>
+    <a class="boton" href="polos.html">POLOS</a>
+    <a class="boton" href="pantalones.html">PANTALONES</a>
+    <a class="boton" href="chalecos.html">CHALECOS</a>
+    <a class="boton" href="mamelucos.html">MAMELUCOS</a>
+    <a class="boton" href="gorros.html">GORROS</a>
+    <a class="boton" href="camisa.html">CAMISAS</a>
+    <a class="boton" href="casacas.html">CASACAS</a>
+    <a class="boton" href="mochilas.html">MOCHILAS</a>
+    <a class="boton" href="mandiles.html">MANDILES</a>
+    <a class="boton" href="bolsos.html">BOLSOS</a>
+    <a class="boton" href="vestidos.html">TRAJES</a>
+    <a class="boton" href="nosotros.html">NOSOTROS</a>
+    <a class="boton" href="contactos.html">CONTACTOS</a>
+  </div>
+
+  <header>
+    <h1>🧥 CASACAS PERSONALIZADAS</h1>
+  </header>
+
+  <section class="descripcion">
+    <h2>Confección según requerimientos:</h2>
+    <ul>
+      <li>Taslan engomado</li>
+      <li>Hipora</li>
+    </ul>
+    <h2>Con forro en:</h2>
+    <ul>
+      <li>Micropolar</li>
+      <li>Laminado</li>
+      <li>Afelpado</li>
+    </ul>
+    <p style="text-align:center; margin-top:10px;">📦 Pedidos a partir de docena (12 unidades)</p>
+  </section>
+
+  <section class="galeria">
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/495254964_1302961364945573_7508657945076252153_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGnADxlzRL2TAsYflTpe-C3gFUImAz_vBSAVQiYDP-8FIMP_3JLko0hHS8YjUEAhkKhRGAhJulfeCVa04dkC36-&_nc_ohc=_CKVy5pfuBAQ7kNvwFivC9r&_nc_oc=AdkHIDjvmpc3C2OJJI-f97QZmZEUlp99Gy5BKl_KXJKwxvjaS0ubHlQ8p_XVaAg3dGdF0P3nvMByA--8pwPKrFgl&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=Xf0xFAHHTbYVy9U9mqieJg&oh=00_AfREsby92oU16u6z14BgTWgMXsLUw_5sDK81j7Z4DW04bg&oe=68804DC3" alt="Casaca modelo 1">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/494352207_1302961358278907_1611109295929690163_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHQ2HQRlF73cxamg30RujuTTfvpAs8SNldN--kCzxI2Vx9qy6ioAHAtf2TXu6Qw9v6rjRXSKU5gsifFFHmobkej&_nc_ohc=eW0PEt_rJSMQ7kNvwHFuOTt&_nc_oc=Adns-v5RijmusE6IEshAXd4DkMHQaZicMjxv9F2s-bGxSSaNH9uNb62BgEMsFI2C2rFqK6gOA3PlmTUgZbKDqCGc&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=Xf0xFAHHTbYVy9U9mqieJg&oh=00_AfQ09foLEODpPieRt3Z6QhiwNgP_hGoGkJjJ1MTF6ovMYQ&oe=68802FA2" alt="Casaca modelo 2">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/493967859_1298767622031614_331857689904926927_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGSSwq2R3QOkFpVmyylQO_72Z8BS-9PMl_ZnwFL708yX1qOHznSl1L5FwMBbfUFFKsi1_Dxv8j_xGl-1idprHjH&_nc_ohc=ASX5DEQp5VUQ7kNvwFvPPut&_nc_oc=Adm0JA0K6qsOwKwLOlvDcqTSz_Y3Cnqm8lv3sOs1vcvs3DwSEx7nweQHrGfLSfD54tFrLJhtC0OQvlClB7DMqWDE&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=nmhYt0VIFRXes2lgG-IGgg&oh=00_AfTf9juPzLMZ70vAdtESvZZEv4Tag3g6-vvlbF7RZUM9JA&oe=68805615" alt="Casaca modelo 3">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/494006337_1298767782031598_3022546247756791952_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH6zbpOLvbDqQqoYqWjQh5eE9OsP3nwb58T06w_efBvnxzQp3vty8PTsQMtrMy03CuRnbE7-LldTqCFdpX-Jsfr&_nc_ohc=u-HwMkzbfisQ7kNvwHz2ezE&_nc_oc=AdmC10gu0XFsUJNMOVX06-5R6hWxv9k-lb4ZXjMsfNNOIG69K5CjoVQN3tS9ziVPU7u9d5LxjDpgICCQboHsCVLV&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=nmhYt0VIFRXes2lgG-IGgg&oh=00_AfRZGVOgVWU_WwEkHGo11Cp2PaRhy8AunxHCxEukWeo6Gg&oe=6880472E" alt="Casaca modelo 4">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/494045533_1298767438698299_1786170199122901234_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHIR7VJGokA3TOlGJ5C6OfYa7_ZPWkZ5dJrv9k9aRnl0jemRVlqNXXM3GkIKxFiLp6EIV_qG1Oo2-Uu80a1Za50&_nc_ohc=AfSEsfIqlEkQ7kNvwGN_RSx&_nc_oc=AdnZ7QgYA23zB8mUl6pxCV46EV0sLLO2HsyHhpOivnkS9hBA1ydchDiZofBjasBmdOIcMRzWM2d0XPr24kWZM3NP&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=nmhYt0VIFRXes2lgG-IGgg&oh=00_AfQ59y-HF86xW07lJHYgjNecfo--20ZWLJ91pWXK4U0qSg&oe=68804600" alt="Casaca modelo 4">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/492768653_1297946262113750_8420066502282271339_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGW-VDAF8IGpDbOMFfhPL07DavYVVfZ4hQNq9hVV9niFDGqvnzcq8OQY9b1Sks9BiaJSbXuNGHFc4_Gzah-HiG4&_nc_ohc=aDpp3XuvdrIQ7kNvwFQk4rQ&_nc_oc=Adn7VLPhTkL3N-Z_h1aSVV3o-kV6DaNkOgmjLaTVWcufU6WU9q0dWWQbI9sUG58fgnAUR4WBHER7iLqb5Jz7M5bT&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=b7LLN0st9E6x_f5Bim9Jxg&oh=00_AfQpi3ycHw-gWlwtYkR_8whUr98tbunTj_wkSaoubzxwgQ&oe=68805A62" alt="Casaca modelo 4">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/492855298_1297946238780419_3806374120319984417_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFjKIrKxDFXCvigMlDUqwasUbH1vKykRz1RsfW8rKRHPaasM9HyxyKRxJRNQwB0cojy_-F8A2mGF_OWXyrwQZsf&_nc_ohc=J0LTe1z0-nMQ7kNvwEU9skR&_nc_oc=AdlCNEuE7fy36YeJFYCo_v4C-0HBK87GChGUX2WizHSJXRpOJ6dQOGGUwI7ZyzHz4xw9nOATjmf-QEvRH7EXGy36&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=b7LLN0st9E6x_f5Bim9Jxg&oh=00_AfQqUqKZFVe323S0LDg2cqNrQ-af5XJUK7qRNBitCVcKjQ&oe=6880625D" alt="Casaca modelo 4">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/492570701_1296101512298225_7515971837420534683_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeED7VBFyQ99Ok8cWTWBD7IEA3x9dk0f-JoDfH12TR_4msSIMttsPZ4jmaEBItdOqHIYlvtFQv8zeYt12NWSPNOg&_nc_ohc=0u9XoqbBbooQ7kNvwFMI7WC&_nc_oc=AdnzUIUTgWDKungM8VcURB--tGOdzTqNkQYtIXXoHjLfvo5eSiusWa788y1ERrCTwRUrK8AqF9r9_0ILHb2Z7wp4&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=1VsPumeb6b-R1Y7Taz59Qg&oh=00_AfQL3HQYexvx1utYRjlygWtFy0wordek6D8yv7VTodLPKQ&oe=68806262" alt="Casaca modelo 4">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/492468780_1296101455631564_2344936491782578550_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGGOPO--YKF9mmVeNppSrMw84QM7kKg8PPzhAzuQqDw84osyVWhZGoMsVuWChE4GHC53DpGPIbI8uPq-mHEdII3&_nc_ohc=EhPY4yxCW8sQ7kNvwGVV3Sc&_nc_oc=AdnshvEWzs-QrsuwnpbEpaxes-XHACIw5XrTXHUE7tib1aUeLLhyojfPeg4hWG195TlCl3IzjcmsL5s4qOJ8TLr5&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=1VsPumeb6b-R1Y7Taz59Qg&oh=00_AfTYIujsDe8tMgLTFtdfryaD-DpknRgX6EfodBKNsTzVSA&oe=688032E3" alt="Casaca modelo 4">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/492484818_1295011105740599_6296772772480761530_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFzbVvRf8aabmMmsqVlU8ilNwmSQxqX--w3CZJDGpf77EzhC7_Usxhq2A5DY2_SIGwi4bJx34VrZcn4UYonEaQA&_nc_ohc=yjcOwfQx4hcQ7kNvwHzrBic&_nc_oc=AdlaOdXMLv9rTTt00ADppgFhM6XNKy5lb6txH_xl7cg62hB1viClCpVZ8gvcy83aJQlHL77-rUF9gN5LaJOIO2Hq&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=Z2hG8HEkzLelD04U3_ZMWA&oh=00_AfRaIyBZmc9lRYHKS1ZcuK8ZWV5XJZoTCeERekN7QFkf-w&oe=688045DF" alt="Casaca modelo 4">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/491957537_1295011179073925_3885760209299986147_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGlGezWQM-Fe3wxIWjaHfDPP3S7ifsDA0k_dLuJ-wMDSX5wCCUlqql6oBFine8INsvmkd3lrI8WI2OUdCdjdwwU&_nc_ohc=zIxIlJm0m_0Q7kNvwF193Jj&_nc_oc=Adms0y2ia8k8uUNuIRVFDhTvgKkI6FuauwoInGi0wkslyWvkJtqK8BI-qD3A82d0S0Xnal33X_8uloiUG0i3WNmx&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=Z2hG8HEkzLelD04U3_ZMWA&oh=00_AfS6Q5IQvLsa3RYjsMu0FRciBosic7WMSbYF06Bkh9B8eQ&oe=688058F5" alt="Casaca modelo 4">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/491959620_1295011159073927_3318891183375141215_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH5V17z799NNDa8sQQ9uIaeWGYS0pXVettYZhLSldV623-lkKgU0Uz-IZjQwLlG9xa_padsSAXsDc4oMf7xI4V-&_nc_ohc=mdT3ayWLnYEQ7kNvwGUuq3k&_nc_oc=AdkxRp1IUHo9fJpw7uGVJEmeY-jTX0RICZTP1CJ7H2M04JH1uqN8aV9uCDjgndNYWGbexYksnSYkIVxf6LoGhYVB&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=LmXqvhwh4yYlXEWO8c6Ijw&oh=00_AfS8yznXzSQDGTQOdcicknBgOHEWmTvPYR8G1yVZDwZLPQ&oe=68805BC1" alt="Casaca modelo 4">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/492427447_1295011172407259_3328903178229817508_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHZE35iiIvnzC0rgjpA9vBXktW-uPkvv6OS1b64-S-_ox4V2uuhQIuhPd306zrFRllwKdn1ZtCB6eTQMzbMZSmy&_nc_ohc=CD7Gvw97YsgQ7kNvwE7FH8B&_nc_oc=AdkbvddV76pv0YDXXq0kfw9dLk4gguJ1DpnRUugCeTlnXcssfKXmJYwshG5s8rOFvFzjRnWjYFzEHD0RGnAa_U4A&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=LmXqvhwh4yYlXEWO8c6Ijw&oh=00_AfQTrG-7dxGcMYGyaSJHgq1RAb-NFirnpLaVoDkcWmrRcQ&oe=68803AEE" alt="Casaca modelo 4">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/492080232_1294240015817708_630249895795138359_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGza35zIRSj5BxNwIg766_OSdRVoyl0gLlJ1FWjKXSAudOniKIx2eeRfctAdFFxd3u6-6sU5SGV01XM1xH2jNg-&_nc_ohc=TMEewFOVMM0Q7kNvwG1seih&_nc_oc=AdkTBWp7BS1OpQh7D2wXeCd-0Bp7Jt1aoLt2sgFMgWOHUtnkFJBwzprMuMJFONM96NmNGTCvd1e-od00yLJHvbEg&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=Xe2w-4A64iRBDijodgGjfw&oh=00_AfRJiqwd9UKNXCTxvj2_DiD-v_21BCGSz7yt29bwzV9VGw&oe=68803474" alt="Casaca modelo 4">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/492054360_1294240379151005_2751625551011884934_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEc6XkafgbK8EPdENmi-EOv6OdZ2T1kM2zo51nZPWQzbCCmYKZNNi0WAhi8NiFlgYOcqqHaE8m40SR26GCAm77t&_nc_ohc=tEAEIvXf4MMQ7kNvwGWwENe&_nc_oc=AdlFuJG-Xxd0X6K4uH-d0QLnViaWpqHiriivh1BXiFSfKZ6P__7_h3nxO7RlYOWmcQFqaMgXGXctl7DKsQfOfEmJ&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=Xe2w-4A64iRBDijodgGjfw&oh=00_AfRBWhXbEwBfT2yL46R3easzfXzYR0fFLviHGq85s7xilA&oe=688050EB" alt="Casaca modelo 4">
+    </div>
+       <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/490715167_1283386496903060_8740098085924935995_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHwZbjb14YASQxm6pnZwFpDDX5dF2uWq8wNfl0Xa5arzFfcoLecVYueHfI1r_-yBuIt9ax0rSrsleewwe5-QjGN&_nc_ohc=diKFNRTnsp8Q7kNvwFIhC5P&_nc_oc=AdlXGqNolw2ZPKzS1WgTBKBMDspXI6Dc4jTfcjDIqAdwsA5PfIOjBh3r96K7KW4sM0rJvLx0CbUvpC46dQAgQpc2&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=E5PPXdMSqx2CiAE_n-dOZA&oh=00_AfTcMWbYNBLuIxsrsgt7XmVpJwLE47fLRUBQpqMqKw3JRA&oe=68805E10" alt="Casaca modelo 4">
+    </div> 
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/490346089_1283386623569714_6904881635092097733_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE0QWLlvisMZEiM8lJtOQFTgnLU6deMQ5CCctTp14xDkHnVrP-2-4d9H_xVHdcBsu_Xw8dDZI8_he-219uOM3-V&_nc_ohc=Wu6piZ06qvAQ7kNvwHPWdJt&_nc_oc=AdmIX2XlCoB7w3LQBXGSKOyhWqj63eu6xv6HUglpuZpWCe6CSLXxlkrW6F_0Xa232u6qt68Y7mtRGqHZQrAtVPHt&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=E5PPXdMSqx2CiAE_n-dOZA&oh=00_AfQjHzvS6XDbWyXe9wIhB56ORr6Ax8qLTwzudMB6woDgmA&oe=68805B2F" alt="Casaca modelo 4">
+    </div> 
+      <!-- <div class="marco">
+      <img src="" alt="Casaca modelo 4">
+    </div>  -->
+  </section>
+
+  <div style="text-align: center;">
+    <a class="volver" href="producto.html">← Volver a categorías</a>
+  </div>
+
+  <footer>
+    HERLIZ CONFECCIONES | confecciones.herliz@gmail.com | 📞 963 382 211
+    <br>
+    Jr. Gamarra N° 1010 - 2do. Piso Tienda 205 – Gamarra – La Victoria
+  </footer>
+
+</body>
+</html>

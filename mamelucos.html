@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAMELUCOS | Herliz Confecciones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(135deg, #FF9800, #9C27B0);
+      color: white;
+      padding-top: 100px;
+      padding-bottom: 60px;
+      overflow-x: hidden;
+      animation: fondoMovimiento 20s linear infinite;
+    }
+
+    @keyframes fondoMovimiento {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 999;
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      scrollbar-width: none;
+    }
+
+    .menu::-webkit-scrollbar {
+      display: none;
+    }
+
+    .boton {
+      flex: 0 0 auto;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid #ffc107;
+      padding: 10px 18px;
+      margin: 6px;
+      font-size: 1em;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .boton:hover {
+      background: #ffc107;
+      color: #000;
+      transform: scale(1.08) rotate(-1deg);
+      box-shadow: 0 0 15px #ffc107;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      animation: aparecer 1.5s ease-out;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px #00000070;
+    }
+
+    @keyframes aparecer {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .descripcion {
+      max-width: 800px;
+      margin: 20px auto;
+      background: rgba(255,255,255,0.1);
+      padding: 20px 30px;
+      border-radius: 15px;
+      line-height: 1.7em;
+      box-shadow: 0 0 12px rgba(255,255,255,0.2);
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .descripcion h2 {
+      color: #FFC107;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .descripcion ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .descripcion li::before {
+      content: "👉🏽 ";
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    .marco {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .marco:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255,255,255,0.6);
+    }
+
+    .marco img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(255,255,255,0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .marco img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    }
+
+    .volver {
+      display: inline-block;
+      margin: 50px auto 0;
+      text-align: center;
+      background-color: white;
+      color: #9C27B0;
+      padding: 12px 30px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .volver:hover {
+      background-color: #9C27B0;
+      color: white;
+      transform: scale(1.08);
+      box-shadow: 0 0 15px #9C27B0;
+    }
+
+    footer {
+      background-color: rgba(0,0,0,0.2);
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 0.9em;
+      margin-top: 50px;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @media (max-width: 600px) {
+      .menu {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu">
+    <a class="boton" href="producto.html">🏠 INICIO</a>
+    <a class="boton" href="polos.html">POLOS</a>
+    <a class="boton" href="pantalones.html">PANTALONES</a>
+    <a class="boton" href="chalecos.html">CHALECOS</a>
+    <a class="boton" href="mamelucos.html">MAMELUCOS</a>
+    <a class="boton" href="gorros.html">GORROS</a>
+    <a class="boton" href="camisa.html">CAMISAS</a>
+    <a class="boton" href="casacas.html">CASACAS</a>
+    <a class="boton" href="mochilas.html">MOCHILAS</a>
+    <a class="boton" href="mandiles.html">MANDILES</a>
+    <a class="boton" href="bolsos.html">BOLSOS</a>
+    <a class="boton" href="vestidos.html">TRAJES</a>
+    <a class="boton" href="nosotros.html">NOSOTROS</a>
+    <a class="boton" href="contactos.html">CONTACTOS</a>
+  </div>
+
+  <header>
+    <h1>👩‍🔧🧑🏽‍🏭👷‍♂️ OVEROLES INDUSTRIALES 👷‍♂️🧑🏽‍🏭👩‍🔧</h1>
+  </header>
+
+  <section class="descripcion">
+    <h2>Protección, comodidad y resistencia en una sola prenda:</h2>
+    <ul>
+      <li>Resistente al desgaste.</li>
+      <li>Material fresco y duradero.</li>
+      <li>Brinda seguridad.</li>
+      <li>Protege ante condiciones climáticas.</li>
+      <li>Cómodo y permite movilidad.</li>
+    </ul>
+  </section>
+
+  <section class="galeria">
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/494673766_1308550394386670_7702607496584710257_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF7jwbpujgQ3CQdZt45i877UvjqvwXyFopS-Oq_BfIWit095bvzsvLPI4_QJIKPB7KTTUOFmJ9wHrogcA5_wLWM&_nc_ohc=AOZ6bYPbTZ0Q7kNvwFk1Ubk&_nc_oc=AdloK-00Lj5juxjrkV9uFTvGbMuV4no54LoGrhrTk4Z39eChEAJ-IltPuWxohPM1xObgNTzbwxq_dqSdHsGcMHVj&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=Xf0xFAHHTbYVy9U9mqieJg&oh=00_AfQLPByADP0s9CTknX5FAIfYUkEFDjLigpmbhtMkqnYmww&oe=68804C28" alt="Mameluco 1">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/494674668_1308550344386675_1942791748359222814_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF9QGj4IWUViii-PIqThxsxzEgRCdrkVXnMSBEJ2uRVeQvR1-O7EalTLHP_5BCSfQ9P_V72Gs45ULayLsVTaHim&_nc_ohc=ADLqrf8G6VcQ7kNvwET0gCr&_nc_oc=Adkj7UuG7hdtHBeXonu7T1MOpWtNEYKw1nq6K7hbtoOGRXxLaqcivh5-ngnPNh22l90pdiApB0HpWEZuYxk_QWiP&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=Xf0xFAHHTbYVy9U9mqieJg&oh=00_AfQw-SRLFkyCKWanp6YeuBXKW5XHXD_YWoLEMlenhmD_GA&oe=68802D34" alt="Mameluco 2">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/493908600_1298767822031594_1056721181906033286_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHC0og5KdpyQZ78GgW8NeaXhMp_mBIZgFSEyn-YEhmAVKyumA_a_CCnTEJBgcHuquPx2l5O9FX70eCFIYPYazap&_nc_ohc=dJyLVdL98NoQ7kNvwF0fSW1&_nc_oc=AdnKsSfgTSvGyPpJH6SgFXx2q7NiLMbIZc2OfiCMst7-GMqQWZZc-gZcIYSFFvMSnenE1QrkYuogKjNDQ3ywgItT&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=nmhYt0VIFRXes2lgG-IGgg&oh=00_AfQ2Y4GKq4iLjzjWveCEDA8Utl_Li_16Kpe1eDKBRt_A6g&oe=68806040" alt="Mameluco 2">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/493472490_1298767422031634_8048163174957778714_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHEZsBBgnMsWpxLaGnbOXxO7DiqgdlCakXsOKqB2UJqRW2-Da1AK5FaYjwQFv_Lvz0yi8Sqo2mxmduPjT5-6vsO&_nc_ohc=TMM_gAnFZXYQ7kNvwG-ZjwR&_nc_oc=Adliv4AmzGGJ2YQhrMhFEYiB3VYUFPq8_W0CcYmRctJcByrODCdWlyqZ7sKGPEkfwWXR2hatXRQM_SOBapB9FsEb&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=nmhYt0VIFRXes2lgG-IGgg&oh=00_AfTrv-zSAOUva76s-ZnCISHYw953MVforTI2l8VABPG_cg&oe=688037C3" alt="Mameluco 2">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/492104474_1294128272495549_4400397887861762197_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFSbpCbZ2tMCM4xiLKE3-kA8qWMw6xcOwvypYzDrFw7C0qNB91_Y2DAG90FYRCzRKeG8P4J7kXLRXuMwI-PvW_A&_nc_ohc=ihBauqk7z00Q7kNvwHC5qJ8&_nc_oc=Adl2w9laGv4n3KJVv1i1eNTqWkPJuzucJ_WVlZ585yxhELoUTx_zrbnJMKro7aYwh0Xhy4n3AxfnIcM1oLtYpI-6&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=qmrnmLknWAxS5OJCDCDWCw&oh=00_AfQ2QLmLb9LF2sjKsDeLiShMgRtS8bqxBMlVYFrAMZ1Ezg&oe=688060C5" alt="Mameluco 2">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/491603959_1286454776596232_216989110906310438_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHwGqaBH7NS7h8CFKiGOdrI1Rgf0BMbCbfVGB_QExsJt7UFYVq5y96FXrrX4CmsGtOg9p2l72B6qSjY24HGMhHX&_nc_ohc=_pAbjaQRXrsQ7kNvwGvdMP6&_nc_oc=AdluQAdh6_UG2MDGghfeta3BRj9ypAWZgBbzav2PCfcxMRC3ywDPvmT19WcHdA3w0ovFUbtHoUJSsqRn9wJhjxhJ&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=pCxVELJLoOxHMXnk_o5hvw&oh=00_AfQ3o2SRywEnDHfH9dNTEVYOm6casQ_H_6yZYyjiQ8SCPg&oe=68804674" alt="Mameluco 2">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/490675718_1286454673262909_4890383656093543603_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFQHPurR4zRYday5rjwlF_6_bABLrFXqfj9sAEusVep-JeZs3pNlr2dBfeDGQEqwmHXz6_35n432T3BC7Y_PE4R&_nc_ohc=va8aFZ53d-MQ7kNvwHU--ua&_nc_oc=AdmM3GaE00QDBZuJYsQ9tbfLjse6wOBGzCrOc7vIsI80IyOgbjhWy-Nx0X9MHjlmfb0fSm9tnrJn4f4TKldBUfHr&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=pCxVELJLoOxHMXnk_o5hvw&oh=00_AfRpvlOn1Pas4M3J5CJSoNj4t3HoykKZ2GdRb9fphMiK0w&oe=6880528A" alt="Mameluco 2">
+    </div>
+     <!-- <div class="marco">
+      <img src="mameluco1.jpg" alt="Mameluco 2">
+    </div> -->
+  </section>
+
+  <div style="text-align: center;">
+    <a class="volver" href="producto.html">← Volver a categorías</a>
+  </div>
+
+  <footer>
+    HERLIZ CONFECCIONES | confecciones.herliz@gmail.com | 📞 963 382 211
+    <br>
+    Jr. Gamarra N° 1010 - 2do. Piso Tienda 205 – Gamarra – La Victoria
+  </footer>
+
+</body>
+</html>

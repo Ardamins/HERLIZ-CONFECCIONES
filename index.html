@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🌐 HERLIZ CONFECCIONES</title>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Russo One', sans-serif;
+      background: linear-gradient(135deg, #00BCD4, #9C27B0);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      overflow-x: hidden;
+      animation: fadeIn 1.5s ease;
+      padding-top: 60px; /* espacio para el menú fijo */
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* MENÚ FIJO HORIZONTAL */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      z-index: 1000;
+    }
+
+    nav a {
+      flex: 0 0 auto;
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      font-weight: bold;
+      font-size: 1em;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: #fdd835;
+      color: #000;
+    }
+
+    header {
+      padding: 50px 20px 20px;
+    }
+
+    header img {
+      width: 300px;
+      max-width: 80%;
+      border-radius: 50%;
+      animation: zoomIn 1.5s ease-out;
+      box-shadow: 0 0 25px rgba(255,255,255,0.3);
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.3); opacity: 0; }
+      to   { transform: scale(1); opacity: 1; }
+    }
+
+    .presentacion {
+      padding: 20px 30px;
+      max-width: 900px;
+      animation: slideUp 1.6s ease;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to   { transform: translateY(0); opacity: 1; }
+    }
+
+    .presentacion h1 {
+      font-size: 2.6em;
+      margin-bottom: 18px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .presentacion p {
+      font-size: 1.25em;
+      line-height: 1.6em;
+      color: #f5f5f5;
+    }
+
+    .boton-producto {
+      margin: 50px 0 30px;
+      animation: pulse 3s infinite;
+    }
+
+    .boton-producto a {
+      background-color: white;
+      color: #7B1FA2;
+      padding: 15px 40px;
+      font-size: 1.7em;
+      text-decoration: none;
+      border-radius: 15px;
+      font-weight: bold;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+      transition: 0.4s;
+    }
+
+    .boton-producto a:hover {
+      background-color: #7B1FA2;
+      color: white;
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.3);
+      width: 100%;
+      padding: 20px;
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+
+    footer img {
+      width: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    .social {
+      margin-top: 10px;
+    }
+
+    .social img {
+      width: 30px;
+      margin: 0 8px;
+      vertical-align: middle;
+      transition: transform 0.3s ease;
+    }
+
+    .social img:hover {
+      transform: scale(1.2);
+    }
+
+    @media screen and (max-width: 600px) {
+      .presentacion h1 {
+        font-size: 1.8em;
+      }
+
+      .presentacion p {
+        font-size: 1em;
+      }
+
+      .boton-producto a {
+        font-size: 1.3em;
+        padding: 12px 25px;
+      }
+
+      nav a {
+        font-size: 0.95em;
+        padding: 12px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo1.jpg" alt="Logo Herliz Confecciones">
+  </header>
+
+  <section class="presentacion">
+    <h1>Productos de Alta Calidad a Precios Increíbles</h1>
+    <p>
+      En <strong>HERLIZ CONFECCIONES</strong> te ofrecemos lo mejor en moda y confección, con diseños exclusivos,<br>
+      materiales resistentes y una atención personalizada que te hará volver.<br>
+      ¡Viste con estilo y confianza, sin pagar de más!
+    </p>
+  </section>
+
+  <div class="boton-producto">
+    <a href="producto.html">INGRESAR A PRODUCTOS</a>
+  </div>
+
+  <footer>
+    <div>
+      <p>
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Correo"> confecciones.herliz@gmail.com |
+        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Teléfono"> 963 382 211
+      </p>
+      <p>
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Ubicación">
+        Jr. Gamarra N° 1010 - 2do. Piso Tienda 205 – Gamarra – La Victoria
+      </p>
+    </div>
+    <div class="social">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" alt="Facebook">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png" alt="Instagram">
+    </div>
+  </footer>
+
+</body>
+</html>

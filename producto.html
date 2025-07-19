@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productos | Herliz Confecciones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Russo One', sans-serif;
+      background: linear-gradient(135deg, #00BCD4, #9C27B0);
+      color: white;
+      padding-top: 90px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: opacity 1; transform: translateY(0); }
+    }
+
+    .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 999;
+    padding: 12px 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none; /* Firefox */
+    }
+     .menu::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+     }
+      .menu .boton {
+    display: inline-block;
+    white-space: nowrap;
+      }
+    .boton {
+      background: rgba(255,255,255,0.1);
+      border: 2px solid #fdd835;
+      padding: 10px 20px;
+      margin: 6px;
+      font-size: 1em;
+      color: white;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .boton:hover {
+      background: #fdd835;
+      color: #000;
+      transform: scale(1.08);
+    }
+
+    h1 {
+      text-align: center;
+      margin: 40px 15px 30px;
+      font-size: 2.5em;
+      text-shadow: 2px 2px #00000060;
+      animation: bounceIn 1.2s ease;
+    }
+
+    @keyframes bounceIn {
+      0%   { transform: scale(0.9); opacity: 0; }
+      50%  { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    .volver {
+      display: inline-block;
+      margin: 50px auto 30px;
+      text-align: center;
+      background-color: #fff;
+      color: #9C27B0;
+      padding: 18px 50px;
+      border-radius: 15px;
+      font-weight: bold;
+      font-size: 1.3em;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: 0.4s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .volver:hover {
+      background-color: #9C27B0;
+      color: white;
+      transform: scale(1.08);
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.05); }
+    }
+
+    footer {
+      background-color: rgba(0,0,0,0.3);
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 0.95em;
+      margin-top: 60px;
+    }
+
+    /* Carrusel manual */
+    .carrusel {
+      position: relative;
+  max-width: 800px;
+  margin: 30px auto;
+  overflow: hidden;
+  border: 5px solid white;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.4);
+    }
+
+    .carrusel img {
+      display: none;
+  width: 100%;
+  height: 550px; /* Aumentado para fotos más largas */
+  object-fit: contain; /* Para que no se recorte */
+  background-color: #9C27B0(201, 95, 207); /* Marco uniforme */
+    }
+
+    .carrusel img.active {
+      display: block;
+    }
+
+    .carrusel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #9C27B0(227, 109, 198, 0.872);
+      color: white;
+      border: none;
+      font-size: 2em;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .carrusel-btn:hover {
+      background: rgba(252, 48, 255, 0.7);
+    }
+
+    .prev { left: 15px; }
+    .next { right: 15px; }
+
+    .indicadores {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .indicadores span {
+      display: inline-block;
+      width: 15px;
+      height: 5px;
+      margin: 0 5px;
+      background-color: white;
+      opacity: 0.4;
+      border-radius: 3px;
+      transition: all 0.3s;
+    }
+
+    .indicadores .activo {
+      opacity: 1;
+      background-color: #fdd835;
+      width: 30px;
+    }
+
+    @media (max-width: 768px) {
+  .carrusel img {
+    height: 350px; /* También aumentamos aquí */
+        font-size: 0.9em;
+        padding: 8px 15px;
+        margin: 4px;
+      }
+
+      .volver {
+        padding: 15px 30px;
+        font-size: 1.1em;
+      }
+
+      .carrusel img {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu">
+    <a class="boton" href="polos.html">POLOS</a>
+    <a class="boton" href="pantalones.html">PANTALONES</a>
+    <a class="boton" href="chalecos.html">CHALECOS</a>
+    <a class="boton" href="mamelucos.html">MAMELUCOS</a>
+    <a class="boton" href="gorros.html">GORROS</a>
+    <a class="boton" href="camisa.html">CAMISAS</a>
+    <a class="boton" href="casacas.html">CASACAS</a>
+    <a class="boton" href="mochilas.html">MOCHILAS</a>
+    <a class="boton" href="mandiles.html">MANDILES</a>
+    <a class="boton" href="bolsos.html">BOLSOS</a>
+    <a class="boton" href="vestidos.html">TRAJES</a>
+    <a class="boton" href="nosotros.html">NOSOTROS</a>
+    <a class="boton" href="contactos.html">CONTACTOS</a>
+  </div>
+
+  <h1>Selecciona una categoría</h1>
+
+  <!-- Carrusel manual -->
+  <div class="carrusel">
+    <button class="carrusel-btn prev" onclick="mover(-1)">❮</button>
+    <img class="active" src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/487174235_1268818688359841_5792131987585266593_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeGa0hswlYnQOeLFl4QGeJgJ58cofgDhuIDnxyh-AOG4gCQcY0PIKKi7nOMHsG6zrG5eWnpBJjxW2Mf7QMt_-HyB&_nc_ohc=Qf-sQtmqzVMQ7kNvwEgrPs0&_nc_oc=Adn2dJrSLVnCahC1DCSGzjFsQUtHVk0EBMyO50gMX3V-lz8EFq5e7qZ-qIn9MB0cX3sFk0T734uyR4uB3fLKfhSo&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=gPWCbh_ddM0Q6z2cisT6Ow&oh=00_AfSJn_sTx6lLWA87wej8Ba5W90p8N3bxIq_q300u3Q8GGw&oe=6880471D" alt="Imagen 1">
+    <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/521175623_1365566382018404_2329659042572215741_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGS20uyAWODa2CE_fUnGfLvfjid0kjJ9GF-OJ3SSMn0YbdwgPAztyucWNw6OSYFCrT4dfiN_0TjummwBV4uMpPc&_nc_ohc=HC6TVccjiMAQ7kNvwHx5Xje&_nc_oc=AdlfBTeKoNyBZ82rJ12iQJ1QZkeJqeptNv0Hh7f4w0PzTO7syoMDwVncIFMGOfVHZ46Ob2IjOwvmqCgd0XFWoeD8&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=9ZCjGm7bZvNN8lo6LsomCw&oh=00_AfT_jL9E9Qz-s2krhl8FSSCCdRIfOWPvVqZ41axhHswCwQ&oe=68803DC9" alt="Imagen 2">
+    <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/518816715_1365566435351732_1425011429132014720_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFcu74wY4ST644LL5cVv_uMVJod-9Yx0n1Umh371jHSfZsb4TVFRvpced6Kr9m7bfKP8UkUq1wr4ArwdxpBXHcW&_nc_ohc=ULXHO0ymydAQ7kNvwGwyVyr&_nc_oc=AdmOmKNMP1MxAVL0MwAe12apz3aK-XOo5mD4yubanm1QmR8B2bKpunwqIZfSNboXF8oObzyI31eh1czc-h8CKtV9&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=aNQIdHUcAzGIfCh7OgPQng&oh=00_AfR19o5Ny55xzudE3VOR6zSDogIpEjapGisFDiO16EFElQ&oe=688071B4" alt="Imagen 3">
+    <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/518057935_1365566525351723_7712677438851930743_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFSjBy1PARf83BqGqxuBT3o0s1_lmV-BOLSzX-WZX4E4qlrkUXTF3AuMOXtQG1d-n2NkxRS2xoVslckYmBgHyqf&_nc_ohc=NqoaWJ8xnXUQ7kNvwG-8sSh&_nc_oc=Adkwrb69yEj9wM0UkHOuPw660iF27R4N7IymZQTypqDnKYCTUD6kYcJjgcR7cpe28CPIiVOLYSXD-KM0KwX5ljhZ&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=4J7NgVdW8ybh_rLJ6RrRpA&oh=00_AfRcbZHNnpMd5vHtD4CspRBQTZ-lnYl55hp29yTbX5h4Tw&oe=68804FB5" alt="Imagen 4">
+    <button class="carrusel-btn next" onclick="mover(1)">❯</button>
+  </div>
+
+  <div class="indicadores">
+    <span class="activo"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div style="text-align: center;">
+    <a class="volver" href="index.html">← Volver al inicio</a>
+  </div>
+
+  <footer>
+    HERLIZ CONFECCIONES | confecciones.herliz@gmail.com | 📞 963 382 211 <br>
+    Jr. Gamarra N° 1010 - 2do. Piso Tienda 205 – Gamarra – La Victoria
+  </footer>
+
+  <script>
+    let indice = 0;
+    const imagenes = document.querySelectorAll(".carrusel img");
+    const puntos = document.querySelectorAll(".indicadores span");
+
+    function mostrarImagen(n) {
+      imagenes.forEach(img => img.classList.remove("active"));
+      puntos.forEach(p => p.classList.remove("activo"));
+      if (n >= imagenes.length) indice = 0;
+      if (n < 0) indice = imagenes.length - 1;
+      imagenes[indice].classList.add("active");
+      puntos[indice].classList.add("activo");
+    }
+
+    function mover(n) {
+      indice += n;
+      mostrarImagen(indice);
+    }
+  </script>
+
+</body>
+</html>

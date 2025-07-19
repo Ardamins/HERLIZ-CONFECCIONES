@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CHALECOS | Herliz Confecciones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(135deg, #FF5722, #9C27B0);
+      color: white;
+      padding-top: 100px;
+      padding-bottom: 60px;
+      overflow-x: hidden;
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 999;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      scrollbar-width: none;
+    }
+
+    .menu::-webkit-scrollbar {
+      display: none;
+    }
+
+    .boton {
+      flex: 0 0 auto;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid #ffc107;
+      padding: 10px 18px;
+      margin: 6px;
+      font-size: 1em;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    .boton:hover {
+      background: #ffc107;
+      color: #000;
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px #00000070;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .descripcion {
+      max-width: 800px;
+      margin: 20px auto;
+      background: rgba(255,255,255,0.1);
+      padding: 20px 30px;
+      border-radius: 15px;
+      line-height: 1.7em;
+      box-shadow: 0 0 12px rgba(255,255,255,0.2);
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .descripcion h2 {
+      color: #FFC107;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .descripcion ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .descripcion li::before {
+      content: "🦺 ";
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .marco {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+      animation: fadeIn 1.3s ease-in-out;
+    }
+
+    .marco img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(255,255,255,0.3);
+      transition: 0.3s ease;
+    }
+
+    .marco img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    }
+
+    .volver {
+      display: inline-block;
+      margin: 50px auto 0;
+      text-align: center;
+      background-color: white;
+      color: #9C27B0;
+      padding: 12px 30px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .volver:hover {
+      background-color: #9C27B0;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: rgba(0,0,0,0.2);
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 0.9em;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu">
+    <a class="boton" href="producto.html">🏠 INICIO</a>
+    <a class="boton" href="polos.html">POLOS</a>
+    <a class="boton" href="pantalones.html">PANTALONES</a>
+    <a class="boton" href="chalecos.html">CHALECOS</a>
+    <a class="boton" href="mamelucos.html">MAMELUCOS</a>
+    <a class="boton" href="gorros.html">GORROS</a>
+    <a class="boton" href="camisa.html">CAMISAS</a>
+    <a class="boton" href="casacas.html">CASACAS</a>
+    <a class="boton" href="mochilas.html">MOCHILAS</a>
+    <a class="boton" href="mandiles.html">MANDILES</a>
+    <a class="boton" href="bolsos.html">BOLSOS</a>
+    <a class="boton" href="vestidos.html">TRAJES</a>
+    <a class="boton" href="nosotros.html">NOSOTROS</a>
+    <a class="boton" href="contactos.html">CONTACTOS</a>
+  </div>
+
+  <header>
+    <h1>🦺🦺 CHALETOS EN DRILL 🦺🦺</h1>
+  </header>
+
+  <section class="descripcion">
+    <h2>Trabajamos con:</h2>
+    <ul>
+      <li>Drill tecnología</li>
+      <li>Drill nuevo mundo</li>
+    </ul>
+    <h2>Cintas:</h2>
+    <ul>
+      <li>Coreana</li>
+      <li>China</li>
+      <li>3M</li>
+    </ul>
+  </section>
+
+  <section class="galeria">
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/494980455_1306163494625360_8268851864985161454_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeETFt9oX8B0qP0HxM_VMS1lye-XyQp4VX7J75fJCnhVfqcshqazWGLJh3MO_4xRXNibndzKwTWOKZjg8sM6T7CO&_nc_ohc=Qru6jhaNSd8Q7kNvwEW8duE&_nc_oc=AdnZxgo26MqH9v_YP0SxFN5lo04VNdzIkTX7ZqCZ9uW_5iywhR9SDXY_DqBxRlMXJ2dlR981al-rV57J_21xZ6W-&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=vDSzYBLaN3axwgl9iXGBFg&oh=00_AfT_qv-gtRYHuF4z_hjajlOwC-b27YVUXtgYWRKCxW5dsg&oe=68804C61" alt="Chaleco 1">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/495380272_1306163531292023_4378132719933041937_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGpxS72iqX1wWYng1blDSfhCSViTqzSCmQJJWJOrNIKZOv2DdJlk3vxD0j13C78JNfik-mdvBoyhkmZyosPUibg&_nc_ohc=-Y9P7mV_n64Q7kNvwEeJRtM&_nc_oc=AdnKAXbhMaw4YFSG59OFnXPkcD2ga-M4TuylwDwtqndyjs0Mn9vJG41gUS0vGDl1De2_6uux9eFyDOzhgc6ftvUF&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=vDSzYBLaN3axwgl9iXGBFg&oh=00_AfQsx1Ql8g_RlMMYYm-DtzvcWkkM-qTMmS0TOk6kdR_dFg&oe=68804D2F" alt="Chaleco 2">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/495294673_1306163574625352_6944535940123121101_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEPnwzQFUEkJcxw1vtCByjUJDhUHECpLV0kOFQcQKktXXuKPJcjf8oZuNdTn8fIOXOyGIU6jufw4m7DhpVYkiPd&_nc_ohc=vOTDQbX_8QUQ7kNvwFoRvnF&_nc_oc=Adk0rfcIDk2Oe7_taAPzPndu4U41n6kZmVCV_n14c0FrqExh3DvnHz9otu9_GAZIX1_miJ93SWL3V9TZfOtbRmCN&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=vDSzYBLaN3axwgl9iXGBFg&oh=00_AfTPNQuzPm4C6_ltnUH85HIuMXOgi77qH6yW-G4LC6iJXg&oe=688045CE" alt="Chaleco 2">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/495166789_1306163607958682_8187740567184744344_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE7pyuFCH2O2MSt2Uf1JWA-e3sVC_sMOiB7exUL-ww6IOOF583Q4f8hyDBt7bvRhpQPMv6LnI-F3jpo5lcy9zzB&_nc_ohc=eSaEKIhmC7oQ7kNvwHQPOBC&_nc_oc=AdkpBj0dV-jLSozuIajRIB-4q1hvUkWcEaWALl2X-rCD2hdXAozIesLMUu85KICMnAzBBewKo9iISnO9Doml9GvZ&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=vDSzYBLaN3axwgl9iXGBFg&oh=00_AfSx5TuqUTrBhuWRd41YMcyG6mdcYJPCoBZKbbfJ6pKFJg&oe=6880566E" alt="Chaleco 2">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/493691227_1296319982276378_4382372146783529854_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH__dGn1uH7HrYgyeER0pSNcr493gvaiwhyvj3eC9qLCIE3QAg3lNGfgKzGz7sDWb_0Jd2UQ2DdtFxVYZlB6W0U&_nc_ohc=lu4BH2UpufQQ7kNvwGzwmbz&_nc_oc=Adkocp76UR4k7ev4r-hAVBoLg6p-UP7xBDfynBh7o9oT0CoiQ0muHtLbER0Kkf5v1PkXFwPK-6U9xmONZv4HCWV_&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=b7LLN0st9E6x_f5Bim9Jxg&oh=00_AfRoG0DGhpo-oPZoVy48A_a0C2K4f9HKGgEB4XkngnxjLg&oe=6880455F" alt="Chaleco 2">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/491921081_1294240025817707_7762146566585573832_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEVM8aVNyo97yA1xfUl8rPh9ACdEkMMm5v0AJ0SQwybm2_QxaaxQ1kPgLtxfJw0j6mplMXgqhFGh0FG9igrMkkb&_nc_ohc=cSu0pXBoM7oQ7kNvwFN6T6-&_nc_oc=AdlLaVZ-AoLLLElvHLX4uk4lCP3KeUR0-Bes7YFmhAqf90V3lrd0izDcSWinaKbORkXigtIjgTzhKQlAaVFQd-i0&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=LmXqvhwh4yYlXEWO8c6Ijw&oh=00_AfREPwWT5iTCMo6aGXGLkJ7fzVvKm75XnwPOXxhf4N7SMw&oe=68805275" alt="Chaleco 2">
+    </div>
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/493193878_1294230615818648_4378097376530489179_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFS2dqthLu2kGyrykNETtefp6TmJ7XdcBunpOYntd1wG_xXMHRXlPZf6lmInpM4uxgo6bV5qxsvE-GM039pNUv9&_nc_ohc=esHFY9LdglkQ7kNvwHLBD1o&_nc_oc=AdnrbqePLbv11GtwSRHACLjiR1bZgTqrHr7WeKcst4nM6GuySBRBhQaScjY0PO44bx4DG_tJBc-CHDfbY-5gyl2R&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=JLhGFjX-Cd9TNTctEq9ySA&oh=00_AfSCnIZrcBK1uDWXUMw2UkML4BbRTuX2U6Vc6k7hZ4lPcQ&oe=688039CE" alt="Chaleco 2">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/492272756_1294061579168885_3725575342446978782_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGKizGah0qACJWXQ30Kl7GQDczQpgPAI3ANzNCmA8AjcLea-VWuuo9PJDOliYGeLEWV83v0hiUNpx4iwCXKNqqc&_nc_ohc=f5urMeRqJo8Q7kNvwEh3BJL&_nc_oc=AdkWzbU-x2f23olvwZyfr0YsumWmuX5oO-5Pcrdaj_ZVwKtK_szqzy0__gnZ6VDKdDQyCkLD0aWIQScAwAgYyA8k&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=PCGzWW5FoYaTkc4ZZgL1_Q&oh=00_AfTO20yFQbAroiR7CeLNiaFK8g0Qp2mZLIjJec20tPbLew&oe=68802EB6" alt="Chaleco 2">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/492067608_1294061415835568_7708685396026277711_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHLq7W6bF22RpalEixOkYEk5vpz-GR8npLm-nP4ZHyekpOZyCVt8ZXm4A8xO_zgLO8y3dUGKetCalHDz0jNODFm&_nc_ohc=XB-NakzWx14Q7kNvwH-kIR6&_nc_oc=AdljBhkFmzKeAr6FYhLgK5A05GQWm2EKIWFKmMRk5MV68yvc0T7mVino3130-BQAA_jf82PQc_NSIPeJSFHL9EwT&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=PCGzWW5FoYaTkc4ZZgL1_Q&oh=00_AfQvd8k6OGQ77d4sgj_K1WDuxfgJ1aIMOYaUKEa7lScQUA&oe=6880437F" alt="Chaleco 2">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/492160449_1294060295835680_7493852200906464124_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGxjOP-8ukd7pUEiFzAxUCWoV2xgO6YNl-hXbGA7pg2X-8LbKTnb8ftOkIbtUL6LxcVCuFc_rioOCN8h1Rs73Yc&_nc_ohc=mBARxtLJbuYQ7kNvwFVr8aC&_nc_oc=AdkLzj8hXur18a-JQEemIgvEui94NDJFwHdaC-lLE1cySeMPQ7Ajpj7awGccWWcLsdg2o2MxgGs9X7wWrgwu1DCs&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=MGnbiUsiS21FC-RO2Wplvw&oh=00_AfQA9St6GIWQlNXUPzpXO9KJHlWNSf0kWwa-qQyVkva3Iw&oe=6880620D" alt="Chaleco 2">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/492592496_1294059552502421_7274868287339857057_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHIw9-tg-vHoBJBtkjZWdV_XQBaodp4r3FdAFqh2nivcfj8aEn6-0dm8iE4_hq81dg1Gc_h0LEdf1PuKknWv28J&_nc_ohc=b9bLELpJYcwQ7kNvwEiQozW&_nc_oc=Adm4qeINI0xsinnEbwhWuYJsNx1-4DqD31QX3vpwM4KE9AztC7JvwjnnSDLkW_wcv_HO6NWDs7vtYaQ6BveVKoFQ&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=MGnbiUsiS21FC-RO2Wplvw&oh=00_AfSyXSnqMslHi6GZIoxQkJBZhZCjCeo4k6_-z2xx-j1c7g&oe=68804E2B" alt="Chaleco 2">
+    </div>
+     </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/491751063_1289154616326248_2044144378482895322_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHupGvs-R-HOyMPtmPLoKf2Za3emfO6kullrd6Z87qS6YeMT_dr50Zw0ML8UH0-qdXe5BrgQcFlztQ9H9dsahsa&_nc_ohc=6FVgfbdLKbMQ7kNvwH1G9WE&_nc_oc=AdmSaru7Lk9Nv2yCN3xmM23YA8egwBwMcqRxHuKtv4Z7Rj5hltsK45i-4QEKmGjepOzrXoRcM4Pcru9f0xZSh7Wg&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=MGnbiUsiS21FC-RO2Wplvw&oh=00_AfR-N8uNeAgtrNxIH1OfJW6jMg1sKv3ozzzn-TLdSKI6qA&oe=6880653B" alt="Chaleco 2">
+    </div>
+     </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/491722142_1289154232992953_6735557395302539241_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEf27X_wKf8qubs4iMwHIQd8Ug0-WbJjxrxSDT5ZsmPGs_t6VEOyRgAFAsxm_Gl4skzCafopOqlCCOT-c5OoKYT&_nc_ohc=a2tUdiFNJ8YQ7kNvwETWLj-&_nc_oc=Adn9ppJthXNhGum-hCjl5mGB2It9GSmOXi5ZZ1s9zJiU5r1LcPYp3ShnPIqMUbJWWzWG7eiRDljMclaAEHgmsGdI&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=MGnbiUsiS21FC-RO2Wplvw&oh=00_AfQ_t-Hc41bbGo4ZriS4GJotgII-SUarKF1ZnIiJ2MCoFg&oe=68803804" alt="Chaleco 2">
+    </div>
+     </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/491972176_1287948199780223_3348016152959312999_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH1pcZ98IxQ-qQvLihdAv_sR1wuftDgDJRHXC5-0OAMlDEuhW0WLkxiQgD7uJ2xzK65t1Azm2KdmM9cEERcP90Q&_nc_ohc=gYFh1jLvaKUQ7kNvwHrCvli&_nc_oc=Adksw9s1wPC3W6MBRDwka05NdgFZNe_0SXeshUxsAiw-sJXg115P4dXoHO2esuIIkTU7QUYoTOyoNGBlZYwxo3NJ&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=2u78Wk-ZlLi2Io6CyDtNLw&oh=00_AfTCwMYXq0a6aCV8BbWsGHOGUdKVyNucNPjIgFvtr6ji5g&oe=68804356" alt="Chaleco 2">
+    </div>
+      <!-- </div>
+      <div class="marco">
+      <img src="chaleco6.jpg" alt="Chaleco 2">
+    </div> -->
+  </section>
+
+  <div style="text-align: center;">
+    <a class="volver" href="producto.html">← Volver a categorías</a>
+  </div>
+
+  <footer>
+    HERLIZ CONFECCIONES | confecciones.herliz@gmail.com | 📞 963 382 211
+    <br>
+    Jr. Gamarra N° 1010 - 2do. Piso Tienda 205 – Gamarra – La Victoria
+  </footer>
+
+</body>
+</html>

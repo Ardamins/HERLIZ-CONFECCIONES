@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MOCHILAS | Herliz Confecciones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(135deg, #2196F3, #9C27B0);
+      color: white;
+      padding-top: 100px;
+      padding-bottom: 60px;
+      overflow-x: hidden;
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 999;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding: 10px 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .boton {
+      flex: 0 0 auto;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid #4CAF50;
+      padding: 10px 18px;
+      margin: 6px;
+      font-size: 1em;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      animation: fadeInUp 1s ease;
+    }
+
+    .boton:hover {
+      background: #4CAF50;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      animation: fadeInDown 1.2s ease-out;
+    }
+
+    header h1 {
+      font-size: 2.4em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px #00000070;
+    }
+
+    .descripcion {
+      max-width: 800px;
+      margin: 20px auto;
+      background: rgba(255,255,255,0.1);
+      padding: 20px 30px;
+      border-radius: 15px;
+      line-height: 1.7em;
+      box-shadow: 0 0 12px rgba(255,255,255,0.2);
+      animation: zoomIn 1s ease;
+    }
+
+    .descripcion h2 {
+      color: #000000;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .descripcion ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .descripcion li::before {
+      content: "🎒 ";
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .marco {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+      animation: zoomIn 0.8s ease;
+    }
+
+    .marco img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(255,255,255,0.3);
+      transition: 0.3s ease;
+    }
+
+    .marco img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    }
+
+    .volver {
+      display: inline-block;
+      margin: 50px auto 0;
+      text-align: center;
+      background-color: white;
+      color: #2196F3;
+      padding: 14px 36px;
+      border-radius: 12px;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      animation: fadeInUp 1s ease;
+    }
+
+    .volver:hover {
+      background-color: #2196F3;
+      color: white;
+      transform: scale(1.08);
+      box-shadow: 0 0 10px white;
+    }
+
+    footer {
+      background-color: rgba(0,0,0,0.2);
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 0.9em;
+      margin-top: 50px;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    @media screen and (max-width: 600px) {
+      .boton {
+        font-size: 0.9em;
+        padding: 8px 14px;
+      }
+
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .volver {
+        font-size: 1em;
+        padding: 10px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu">
+    <a class="boton" href="producto.html">🏠 INICIO</a>
+    <a class="boton" href="polos.html">POLOS</a>
+    <a class="boton" href="pantalones.html">PANTALONES</a>
+    <a class="boton" href="chalecos.html">CHALECOS</a>
+    <a class="boton" href="mamelucos.html">MAMELUCOS</a>
+    <a class="boton" href="gorros.html">GORROS</a>
+    <a class="boton" href="camisa.html">CAMISAS</a>
+    <a class="boton" href="casacas.html">CASACAS</a>
+    <a class="boton" href="mochilas.html">MOCHILAS</a>
+    <a class="boton" href="mandiles.html">MANDILES</a>
+    <a class="boton" href="bolsos.html">BOLSOS</a>
+    <a class="boton" href="vestidos.html">TRAJES</a>
+    <a class="boton" href="nosotros.html">NOSOTROS</a>
+    <a class="boton" href="contactos.html">CONTACTOS</a>
+  </div>
+
+  <header>
+    <h1>🎒 MOCHILAS PERSONALIZADAS</h1>
+  </header>
+
+  <section class="descripcion">
+    <h2>Fabricamos mochilas, canguros y loncheras</h2>
+    <ul>
+      <li>Deportivas</li>
+      <li>Escolares</li>
+      <li>Empresariales</li>
+      <li>Publicitarias</li>
+      <li>Con compartimientos personalizados</li>
+    </ul>
+    <p style="text-align:center; margin-top:10px;">📦 Pedidos mínimos: 12 unidades</p>
+  </section>
+
+  <section class="galeria">
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/494028432_1300362598538783_2003409953115991543_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGNBi5CZHru0pIAWAdaA9aEy0Fr_3ivlhvLQWv_eK-WG7cDKRnwKRuOclHG_IfDerZODAteZ4Kv2Yj4IAZDX0Yi&_nc_ohc=Dtayih5hk50Q7kNvwGZaS5f&_nc_oc=Adm2SCGSXVPBr5gBvwdQF9xkYAq0StLnFWuZYZpGOUg_mxS0GX475OAHkCW-NKjS_ICInqZ6tn0zF_roIRA2gAJ3&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=VlyddpQm6jhmVZqL0IZaaA&oh=00_AfQOASa0LLAVMZb74Dggd4gJocPitch0GTKMn8KERGYoKQ&oe=688060A8" alt="Mochila deportiva">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/492137744_1288772106364499_7506667643167411758_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFHrAWKd4mNn7zoqhMePZsEAyxkqd0oNDkDLGSp3Sg0OVH2Tyjz0LPH-scRGlCaWe1Dwg3UIfk5y3HXkwXZvr4p&_nc_ohc=c8hevytZXhMQ7kNvwHkxUzc&_nc_oc=AdmM5SOMQFRehVFA11QFjer7oja9FzLVbAlA1NsPkWdsSBuGKgtDC0r7Tq56kzFYJs77Mne3zn9EohuEFT-9Y9du&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=SHtiZyqIQLuES_2LHSXnfw&oh=00_AfQHsDELeDH8yhBepZDc5ltG-mXG1uQwhivFfjrBJzJzUA&oe=6880557D" alt="Mochila escolar">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t1.6435-9/49804297_2005206546242657_6635277271735205888_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHNkrs2zOPg2hEsBdcsw9_tSWsLKUawrkpJawspRrCuSlMZuW6YcjutgT39ZI8DKKwKF8iH3h_cestqqsrglR0C&_nc_ohc=KpUiEWlqbo8Q7kNvwHzQaFj&_nc_oc=AdkuLRWbwPksk6qqKlgLENXiniEAQ8KHhEDN34J40GHBKslGxzqhhqALjJjJvZb_Cs4ouDd5iUM7I2iZ91FmS1kw&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=PmUmU_e-tp9SvDo3lzu-zQ&oh=00_AfRmlUNQcai7CcN8kGrBrm1wI3pRa5IEWPjUL7cbzFIaEA&oe=68A1EBE8" alt="Mochila empresarial">
+    </div>
+    <!-- <div class="marco">
+      <img src="" alt="Mochila personalizada">
+    </div> -->
+  </section>
+
+  <div style="text-align: center;">
+    <a class="volver" href="producto.html">← Volver a categorías</a>
+  </div>
+
+  <footer>
+    HERLIZ CONFECCIONES | confecciones.herliz@gmail.com | 📞 963 382 211
+    <br>
+    Jr. Gamarra N° 1010 - 2do. Piso Tienda 205 – Gamarra – La Victoria
+  </footer>
+
+</body>
+</html>

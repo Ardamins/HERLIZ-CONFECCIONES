@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BOLSOS | Herliz Confecciones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(135deg, #2196F3, #9C27B0);
+      color: white;
+      padding-top: 100px;
+      padding-bottom: 60px;
+      overflow-x: hidden;
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 999;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding: 10px 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .boton {
+      flex: 0 0 auto;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid #4CAF50;
+      padding: 10px 18px;
+      margin: 6px;
+      font-size: 1em;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      animation: fadeInUp 1s ease;
+    }
+
+    .boton:hover {
+      background: #4CAF50;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      animation: fadeInDown 1.2s ease-out;
+    }
+
+    header h1 {
+      font-size: 2.4em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px #00000070;
+    }
+
+    .descripcion {
+      max-width: 800px;
+      margin: 20px auto;
+      background: rgba(255,255,255,0.1);
+      padding: 20px 30px;
+      border-radius: 15px;
+      line-height: 1.7em;
+      box-shadow: 0 0 12px rgba(255,255,255,0.2);
+      animation: zoomIn 1s ease;
+    }
+
+    .descripcion h2 {
+      color: #000000;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .descripcion ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .descripcion li::before {
+      content: "👜 ";
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .marco {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+      animation: zoomIn 0.8s ease;
+    }
+
+    .marco img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(255,255,255,0.3);
+      transition: 0.3s ease;
+    }
+
+    .marco img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    }
+
+    .volver {
+      display: inline-block;
+      margin: 50px auto 0;
+      text-align: center;
+      background-color: white;
+      color: #2196F3;
+      padding: 14px 36px;
+      border-radius: 12px;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      animation: fadeInUp 1s ease;
+    }
+
+    .volver:hover {
+      background-color: #2196F3;
+      color: white;
+      transform: scale(1.08);
+      box-shadow: 0 0 10px white;
+    }
+
+    footer {
+      background-color: rgba(0,0,0,0.2);
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 0.9em;
+      margin-top: 50px;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    @media screen and (max-width: 600px) {
+      .boton {
+        font-size: 0.9em;
+        padding: 8px 14px;
+      }
+
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .volver {
+        font-size: 1em;
+        padding: 10px 24px;
+      }
+    }
+    #bol{
+
+       text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu">
+    <a class="boton" href="producto.html">🏠 INICIO</a>
+    <a class="boton" href="polos.html">POLOS</a>
+    <a class="boton" href="pantalones.html">PANTALONES</a>
+    <a class="boton" href="chalecos.html">CHALECOS</a>
+    <a class="boton" href="mamelucos.html">MAMELUCOS</a>
+    <a class="boton" href="gorros.html">GORROS</a>
+    <a class="boton" href="camisa.html">CAMISAS</a>
+    <a class="boton" href="casacas.html">CASACAS</a>
+    <a class="boton" href="mochilas.html">MOCHILAS</a>
+    <a class="boton" href="mandiles.html">MANDILES</a>
+    <a class="boton" href="bolsos.html">BOLSOS</a>
+   <a class="boton" href="vestidos.html">TRAJES</a>
+    <a class="boton" href="nosotros.html">NOSOTROS</a>
+    <a class="boton" href="contactos.html">CONTACTOS</a>
+  </div>
+
+  <header>
+    <h1>👜 Confección de Bolsos y Más</h1>
+  </header>
+
+  <section class="descripcion">
+    <h2> Productos que ofrecemos a nuestros clientes…</h2>
+    <ul>
+      <li>Servilletas en drill</li>
+      <li>Bolsas en tocuyo</li>
+       <li>Popelina</li>
+       <li>Notex</li>
+  </section>
+         <h1 id="bol">👜 Bolsas y otros implementos!!</h1>
+  <section class="galeria">
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t1.6435-9/70917692_2409665849130056_1254644850075107328_n.jpg?stp=dst-jpg_p552x414_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG4PyqKhdI5XxJ7v1O56VEDX8O5KMN3bntfw7kow3dueyfep-ddSNa9ATqWqMS2pjgjcv5uvb1fa2NQ6l-GHwlS&_nc_ohc=vlntP22WnXIQ7kNvwF_tple&_nc_oc=AdnbcO1qz6nMoNU0ZQsZuFFiBwxjhjB7fIIuFclqZ7kxeg58r15vmpBgEClvDfM2Qz6KtTNBXUFheLE6wi3QSwGH&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=HQIfQt14K_ukWhnI7lfVgw&oh=00_AfSmw5g-IVQAZUpqCfQ1JsOGoZqVTMTQpyOhsRlDrfinpA&oe=68A1D88D" alt="👜 Bolsos y productos personalizados">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t1.6435-9/70487973_2409665945796713_1942231567560605696_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGvOjjCIct51zNpEQBjoqk5V8pggt6hhsFXymCC3qGGwQEH26YFep7i7QqjGQMC5XKaWLKa3YrhqzK1HVaGTFE9&_nc_ohc=t3iONrXrJFQQ7kNvwGAL0H8&_nc_oc=Adnlj1YDSU0lKeoZ51VXH4ajebI0Sv9CBhXLBLKH0d0ru1lgHa1lbYGpXMP0srR0Ro38glnDpEjgljHnhIOtZFes&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=HQIfQt14K_ukWhnI7lfVgw&oh=00_AfRyVOQTPI68D7nnyjuU3w-QMEQ_xRbxsWqcSzBygmX9wQ&oe=68A1E8DA" alt="bolsos">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t1.6435-9/70315264_2409665892463385_8225905512022016000_n.jpg?stp=dst-jpg_p552x414_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEe25_4YTUiZVQDNBM8z168PIlk4n1NR4U8iWTifU1HhUJPjLH-0NGqqyop8G_8CznRcBAeRNfhIaRaQemTniKb&_nc_ohc=zO8yZXhb_pkQ7kNvwFh_HGb&_nc_oc=Adm33cERFNzwjXK_dkd0uY8rUufHRkawLSOph0X3_a5OrgmkV81wQ5a82ylFzayHV5NyC9cEPrBTykSZmoP-K98I&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=HQIfQt14K_ukWhnI7lfVgw&oh=00_AfTPN0PLXuYXDJPdrhZ1COF1B8gua1WGdfFApLLLDIf5qw&oe=68A1F30C" alt="bolsos">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t1.6435-9/70504777_2409666005796707_6861312320962822144_n.jpg?stp=dst-jpg_s843x403_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFFmXyW2THId3oM0rmpKcLf3jcxPMBQkDDeNzE8wFCQMKDUoHvvaNJaVBcHO54dvw_OT2pa_48sAWRRM2vvhOnR&_nc_ohc=ntQ6bSJFH5UQ7kNvwHqOb04&_nc_oc=AdlyM_p7O7fpi6yM54v7YKC_aoPNx1_hzENzsBeMD0SdZ_90I5hFD4I6vqcZCbsaE3KgSCoviPuga2MhEcsvXqh1&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=HQIfQt14K_ukWhnI7lfVgw&oh=00_AfSR5ZZYlmEuAohq-uIlHWAYkUxFJEAQHnD9MqyL-27VFg&oe=68A1F295" alt="bolsos">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t1.6435-9/70059955_2409666082463366_5483327675277770752_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG0dHaHg1U3b6mk6n06k-GJ8whOISk2uS7zCE4hKTa5LjmJJirM-uj6i_9bNvmhim4i6VLabNK4OA2qLRlAKtl1&_nc_ohc=CnBUwHnXlbEQ7kNvwFSVhgb&_nc_oc=AdldoKr2Npiz8V8rY2NBdmRDOB9RUqlGCPqTwZO8mrmxKVG49VKRpN-3g52nCvI8sXhGLl2WrFHIxrM2rYH3Tgip&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=SLXi_jk-po8iWueRbdrdyA&oh=00_AfRGStjqr_we_utGFFJiPeSSmmJy3tofbFZnx4Cv56Zz9w&oe=68A1D715" alt="bolsos">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t1.6435-9/70915590_2409666142463360_6246294741005107200_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHbWwQrKRAm6CvIl9ldPcQ2O9IQcZK73BA70hBxkrvcELyCsiHiuLsLSa_HWVsdy1L7mUURgUqfH6VapW0pBNVx&_nc_ohc=1LM8bPdb7IsQ7kNvwHG78Kc&_nc_oc=AdmJINBgE0O8O0004F-B4LU5j6vj0WzaZPflP71cGf_FjZOcl_pqGO_gWK_eN2AfnUd9sIknacS9g_l06V0sV40t&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=YEtqyo-fUbfG_79hUIRYyA&oh=00_AfRh3hjbxZysjc8iKPDjpUJwGCjD564q3lzAvOFhU2icRA&oe=68A1DF41" alt="bolsos">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/494064025_1299759418599101_2965181206664557903_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGUnguXV6uEqckr3C6QRX1bLlnRUL8qVtEuWdFQvypW0VboPvve_ipXYhGzK1Jiv7ngrBGoW15ZDlotVS58lNcU&_nc_ohc=j81xCuMRMDYQ7kNvwHgP-GD&_nc_oc=Adma6hzAecZE5PqMVDxbug21gUiigYirHI9Wtpmkjm1ryh2b-D4PxT-wiz8IQFUsiR-_W7bkPTqDZ6reR8RFRAe8&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=N1VPMIUfclJoJ7ml9RovQQ&oh=00_AfTR_hyW8wLX6vFLzJrF9ZmBcvicE0EPV-FPnkNZJpK-mA&oe=6880619B" alt="bolsos">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/493554352_1299759465265763_7229473769793058121_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGkXEk_QLBQMb4XG1cqF2RJo-14xDcuCdCj7XjENy4J0J6UqAsLvlkYPf3xaXPJugkOgI3VDu-XjEtJz44jxVTb&_nc_ohc=h6KlIDV4QhEQ7kNvwGglxsU&_nc_oc=AdlMSBdxykL4z0jFViAV36gneKo972GiVVAyQ3C6p2HEK36Grr5nI0mrpx8mXRGA1z-6bm7WSr7TMRqxDA-Ft8B-&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=N1VPMIUfclJoJ7ml9RovQQ&oh=00_AfRwFeZUAg7gs-01ZxvO5O4wTu1ci6YyEUpgq98v0N0SnA&oe=688059F8" alt="bolsos">
+    </div>
+      </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/494264502_1299759398599103_5826768905830194796_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHL5gzZ33vJnissoPLQkns-u2VHsFiGnF67ZUewWIacXgkMOEMen5obLJM592JyqHywOy69A5FIB5XQYXgoerU7&_nc_ohc=4tQVxDkWVkcQ7kNvwEXiEI2&_nc_oc=AdnPoF9kn_7DeaV1D_IqvPNudrpCsdx5jUF-13GdM7XnCrcDfvqnW3EBxZkfuY3GUdS5H7EyE9lFBSagQ0FU2RBq&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=N1VPMIUfclJoJ7ml9RovQQ&oh=00_AfT8XIyDqFXTVTRvoKJH3HJiQJPX7MMQseciobrpGUJuUw&oe=688051CC" alt="bolsos">
+    </div>
+      </div>
+      </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/494188588_1299759395265770_3492131661293217124_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeET2KQYGFs2TdfAw29NKFe-lcUIn1W2EgOVxQifVbYSA5zktLo09XUEa6AvkQ5QgGe17oPbPk83zsg5zE8K6j0w&_nc_ohc=Zo7rFMGZTRsQ7kNvwGyn7B0&_nc_oc=Adnvc7Wt7QsoPqQIDiWT7VuC8mghjSIgQse9DE5P5qFufCaMU3kx7smHMc3r0HAxKQGZn7CdG3Or3raU9sOgJS5x&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=N1VPMIUfclJoJ7ml9RovQQ&oh=00_AfQWDk6LXl0vgMBXFOGCTwgewJgpwAVIGRZMjyh6BfhaAg&oe=68804E81" alt="bolsos">
+    </div>
+      </div>
+       <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t1.6435-9/48363585_1956734944423151_1857126142050304000_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFuuNBg6SdQ-cfs2JbzyEMRUYCZzhAavL1RgJnOEBq8veW80Q-dyqX-rdCjYDtiL7AATR49FS0CemIKDgx4nm_S&_nc_ohc=yopTC9GFOr4Q7kNvwHlVb0-&_nc_oc=AdnaO9T0OJcIHrHvrvcDx64MD9iPJgtRkJwMS3-Ued0nbQ90yhM5O6VrKRZUl5tlXGEjn-CF6oCc1fpruxk2Jt2L&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=siN3DUbhCN01umrO6CMYGQ&oh=00_AfQmv3HbC3Ibseg7aDqSRvBpOCpR4cwf_u5_EkBkQTnKgQ&oe=68A1EC24" alt="bolsos">
+    </div>
+      </div>
+       <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t1.6435-9/47573022_1956734701089842_6796290742349201408_n.jpg?stp=dst-jpg_p565x565_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHTF6iLD35T-55bdAqPB4bq7-TcX_fqalnv5Nxf9-pqWe_2uDzU3c1EjWqXYHrSl5nclgBNJBJOy3VVgQm0vULW&_nc_ohc=g-20warA4iQQ7kNvwETlRw6&_nc_oc=Adljh_z06MrYn_C0qQHOS8zqrbA4HF4ROVaVnvGAiL_JtqdcjmNRg5HVVROAUfJuSfqjHU1vUmejqXd9hi9ST42D&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=siN3DUbhCN01umrO6CMYGQ&oh=00_AfRMCgEYxOBcJkWK2HfF8xYgiNan1uPRdYvMSqxknjl2_Q&oe=68A1EBE5" alt="bolsos">
+    </div>
+      </div>
+       <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t1.6435-9/48076987_1956734864423159_4919456739134275584_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFqwJwg28sVJdteRJaROykzYsUOcatBTkpixQ5xq0FOSqd-nvGctMdQdTzKw6JymO_D_bkGreQUrSlsoTpkCs5l&_nc_ohc=b8HdaRx940wQ7kNvwG9DCe0&_nc_oc=Adk3h7uH-8wXUJcK_VrIN7oQtsIFFJsB0MiVp_I0gpSYrtYiDS_CiKxZDry9gyhXjSZM0yK0uAefok66iSxBU6rr&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=siN3DUbhCN01umrO6CMYGQ&oh=00_AfTkEKh59_eA70qjHdEOWIA1rNdhJyKeYvepEMs4e-tuYw&oe=68A20672" alt="bolsos">
+    </div>
+      </div>
+       <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t1.6435-9/48386095_1956734797756499_3168308090479050752_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFnOfR5Fhzc39J83ScHiasm1A7dW6EZ8wXUDt1boRnzBQcAW-stAYn0OFSHDxaHb1FQoVtwsJxxsLn-63c3QhF3&_nc_ohc=tYPA1Sfn8FMQ7kNvwHwJHRS&_nc_oc=Adm1SmvthgpPsdn1xw7h6ukyCTXMMRj-jso4CpGAtFXL_T-n1aYWg-IlG3QalLglPckCEFh_oZCAwAlQQjOh_uhQ&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=zH4dYRsBtPqANkIgjr2nzQ&oh=00_AfT2-3GIXD4Hp1baaEKRBoXxHaa3uSyycaOHfK_WUWivGg&oe=68A207B4" alt="bolsos">
+    </div>
+       <!-- </div>
+       <div class="marco">
+      <img src="" alt="bolsos">
+    </div> -->
+
+  </section>
+
+  <div style="text-align: center;">
+    <a class="volver" href="producto.html">← Volver a categorías</a>
+  </div>
+
+  <footer>
+    HERLIZ CONFECCIONES | confecciones.herliz@gmail.com | 📞 963 382 211
+    <br>
+    Jr. Gamarra N° 1010 - 2do. Piso Tienda 205 – Gamarra – La Victoria
+  </footer>
+
+</body>
+</html>

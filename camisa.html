@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAMISAS | Herliz Confecciones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(135deg, #2196F3, #9C27B0);
+      color: white;
+      padding-top: 100px;
+      padding-bottom: 60px;
+      overflow-x: hidden;
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 999;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding: 10px 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .boton {
+      flex: 0 0 auto;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid #4CAF50;
+      padding: 10px 18px;
+      margin: 6px;
+      font-size: 1em;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      animation: fadeInUp 1s ease;
+    }
+
+    .boton:hover {
+      background: #4CAF50;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      animation: fadeInDown 1.2s ease-out;
+    }
+
+    header h1 {
+      font-size: 2.4em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px #00000070;
+    }
+
+    .descripcion {
+      max-width: 800px;
+      margin: 20px auto;
+      background: rgba(255,255,255,0.1);
+      padding: 20px 30px;
+      border-radius: 15px;
+      line-height: 1.7em;
+      box-shadow: 0 0 12px rgba(255,255,255,0.2);
+      animation: zoomIn 1s ease;
+    }
+
+    .descripcion h2 {
+      color: #000000;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .descripcion ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .descripcion li::before {
+      content: "👔 ";
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .marco {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+      animation: zoomIn 0.8s ease;
+    }
+
+    .marco img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(255,255,255,0.3);
+      transition: 0.3s ease;
+    }
+
+    .marco img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    }
+
+    .volver {
+      display: inline-block;
+      margin: 50px auto 0;
+      text-align: center;
+      background-color: white;
+      color: #2196F3;
+      padding: 14px 36px;
+      border-radius: 12px;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      animation: fadeInUp 1s ease;
+    }
+
+    .volver:hover {
+      background-color: #2196F3;
+      color: white;
+      transform: scale(1.08);
+      box-shadow: 0 0 10px white;
+    }
+
+    footer {
+      background-color: rgba(0,0,0,0.2);
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 0.9em;
+      margin-top: 50px;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    @media screen and (max-width: 600px) {
+      .boton {
+        font-size: 0.9em;
+        padding: 8px 14px;
+      }
+
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .volver {
+        font-size: 1em;
+        padding: 10px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+   <div class="menu">
+    <a class="boton" href="producto.html">🏠 INICIO</a>
+    <a class="boton" href="polos.html">POLOS</a>
+    <a class="boton" href="pantalones.html">PANTALONES</a>
+    <a class="boton" href="chalecos.html">CHALECOS</a>
+    <a class="boton" href="mamelucos.html">MAMELUCOS</a>
+    <a class="boton" href="gorros.html">GORROS</a>
+    <a class="boton" href="camisa.html">CAMISAS</a>
+    <a class="boton" href="casacas.html">CASACAS</a>
+    <a class="boton" href="mochilas.html">MOCHILAS</a>
+    <a class="boton" href="mandiles.html">MANDILES</a>
+    <a class="boton" href="bolsos.html">BOLSOS</a>
+    <a class="boton" href="vestidos.html">TRAJES</a>
+    <a class="boton" href="nosotros.html">NOSOTROS</a>
+    <a class="boton" href="contactos.html">CONTACTOS</a>
+  </div>
+
+  <header>
+    <h1>👔 CAMISAS DE CALIDAD</h1>
+  </header>
+
+  <section class="descripcion">
+    <h2>Modelos de Camisas</h2>
+    <ul>
+      <li>Camisas Pique</li>
+      <li>Camisero Oxford</li>
+      <li>Camisero San Jacinto</li>
+      <li>Camisero La parcela</li>
+      <li>Camisero Manga Corta y Larga</li>
+    </ul>
+    <p style="text-align:center; margin-top:10px;">📦 Pedidos a partir de docena (12 unidades)</p>
+  </section>
+
+  <section class="galeria">
+
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/493662232_1298646555377054_2852424541735447578_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFQ9lT1V2Z_YcWbxMcNGDJGA5IVT-l2yxcDkhVP6XbLF2OxGUG1w76CmETf_hzjrhO4HC_pdD2mrBUL6nuPiNCR&_nc_ohc=zeoGaSuQcOIQ7kNvwFC_Efy&_nc_oc=AdkkcjX4_e6egjf55V1HInnhDoPlMCcjXsJ_ucplJCggdUtsXVHaiuYc99Fzj1mn5uy-sikbeBBVEnejjEC02IUe&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=nmhYt0VIFRXes2lgG-IGgg&oh=00_AfTIN01BJZ1XLdlya-yvrLCQDH6Wnx7dn6aEQ-cFEIAdFQ&oe=6880568E" alt="Camisa pique">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/493893037_1298646448710398_220040588142198816_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFjEbFeJc886K8PFvHL87tF_zNJl7UhU_j_M0mXtSFT-LtzqTPB4534LO_b4Tfgkya157DNp_WTDZVK3QOTDpZJ&_nc_ohc=UywtH5idXn0Q7kNvwHeOGsi&_nc_oc=Adlb_BqoE5wOYlZucb6cp1E5pEcQc4keYJxEy6Op6VXsIg244TSxLgCGNb5B-z3yviUT3418bXXexnNY2ae0BpGu&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=nmhYt0VIFRXes2lgG-IGgg&oh=00_AfSO5kqtsrzOR1W8lKhAfAPSYebgBPOFex9tTPSFtcDelQ&oe=68804861" alt="Camisa pique">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/493921061_1298646232043753_7789323313787902484_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHUlFrCZ9xseMEC2jXVaPREDH0sibDIw-kMfSyJsMjD6dsXzSJfowmGk2ORpTqk5pFl5Ta7b1nmSqCDk-WSwkXf&_nc_ohc=pjxD4E5vHJgQ7kNvwFG6c3W&_nc_oc=AdkBvW1cRRIGMgh2RDYMvr7l4wRuFy4TtjqYIfeDyH36oSHQ6Bi2PyRk4LxS0aOT3x9yLPYyYO-D49hdzbnt1EB3&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=nctu6ePo3_Mk-E6vq0LkhQ&oh=00_AfSfcAtjcaB1zWF-KVopCE-lRQnAuDIcjc9WVS5v-sdZUA&oe=68803C39" alt="Camisa pique">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/492494319_1296319988943044_4096876012023688929_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG1FZsp5NODiFknhra-ZpJfAE1utGO3QdYATW60Y7dB1n1FcswO0lbCCikWwgKCR3SP5ZXZy9TYM_8YD7J8xQNl&_nc_ohc=8Jp8LmaIil0Q7kNvwEjhtY9&_nc_oc=AdnY0CNOG32bY1sgnQuyOCeBJIl1kg5lvOowQ_aN8rdNpDBCcJIvXUeAg4WUhlV63zE9X_9xP4Y_mQbqv5WvtWfc&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=b7LLN0st9E6x_f5Bim9Jxg&oh=00_AfQ78ZEjIPn-xUcxmiEKzEAIJCi4QcKvBZW3YCthgY4Qug&oe=68806059" alt="Camisa pique">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/492378346_1295352585706451_8416661065783515548_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHxDBgzlLWbQ7IpF0lObC8ZHDRPgM6Q9wkcNE-AzpD3CbVsHVdN2W5K5y1JM-R1y-0ukvRPSkwZIgRkmozItXeu&_nc_ohc=4XgXhOfEgpkQ7kNvwFQNoOO&_nc_oc=Adn48zUsw_dehmbgiE1KZreEf6A9J2b1wuIaUGoO0sL5SVDpSkf9i99pAIj0obRMyKrfS-66LVWNDTlPVo_C_uVv&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=Z2hG8HEkzLelD04U3_ZMWA&oh=00_AfR1sxEQwOpTP97MaKUBmdPgtjcZm3S4VRPGKD46j_xlSg&oe=68803EFB" alt="Camisa pique">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/491960792_1295011175740592_1445795081785514872_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHj2gtX8leEz6bRZs3koBT1z3f-fHvb9DTPd_58e9v0NBUu5h7czeDrgSjzrlJaVQlO_KuWcxwnrH-CRQ0mGr_9&_nc_ohc=xq2WiM5SKQoQ7kNvwEi91_P&_nc_oc=Adm1GBx6e-GoFQ6ojuqeLQrBXtQfFyu1XWtcJ8fSM7OANiJXhwd9Z_pUw-N-bYGq1pGvh49o0GonqK13-nnUXY0M&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=Z2hG8HEkzLelD04U3_ZMWA&oh=00_AfS3TgoJSEvuMc73iR6dXHX4XnMElDdEz_P96MyIT8CtGg&oe=6880606A" alt="Camisa pique">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/492007212_1294240132484363_6160667151642885087_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHLkq57blAxWQT63RimQ2D9GUAc4Gs_68MZQBzgaz_rw4qtardhu9F71NducLmzQQmnMVIV0j2Um6nsxu9yZMeL&_nc_ohc=AIpRkr03TH8Q7kNvwHSAH-I&_nc_oc=AdkbduCL2T6yncDlmNmHTbuWUWJVMH_9Y8zQ2Sag3kGZmIw7ExAByYEPKwYMujtiDrftM1rHhwX7wJlZghEZNlBy&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=LmXqvhwh4yYlXEWO8c6Ijw&oh=00_AfQ9xSEbi-U1-E1v0X8Yg7-Sw2IzKTYAW4blIZdAiQvwRA&oe=688041CB" alt="Camisa pique">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/492102186_1294240369151006_905667770032821499_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE_m-r2YQ-J2FvT6D-osECeEr0UfyzPyGwSvRR_LM_IbNJwMcqAV0ptPhYL24i8tFfQRVf9wRGNGfNcvtesTc96&_nc_ohc=b9guB_lzbqYQ7kNvwFujwCl&_nc_oc=AdkUUGciqg7w6BL4EuxyZ1BQC4WYzOcYADjNAcGsPtEhrQ8IfoppxGzFY3mS-Y64E2aOo3FL9deGrbKY47ZnjlbQ&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=LmXqvhwh4yYlXEWO8c6Ijw&oh=00_AfRyytPuT7RtDbogcesa2bvAvf3IbI9dv-e4IYNzy1ZLUA&oe=68802ED7" alt="Camisa pique">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/492536133_1294239992484377_5363797026106016014_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGokjGT_dWqHgxqqZcdvtQ8H7RIz0GiLIkftEjPQaIsiaHR7lmTtkqdTSCkWKhQQsSWl3ldM3m4nW6qoatnKi9t&_nc_ohc=pFpsFWQItxsQ7kNvwG3CBYy&_nc_oc=AdmFMBOmQznaAQcIOplOyvfwDYWoMmrnYdvjYHfVgNYNE12s7pt_GuNquUY4LvlaPwgCg-DyBXm-Lc5_Ood8Ia2T&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=Xe2w-4A64iRBDijodgGjfw&oh=00_AfR7Q14DBl78NuVcELKMCjk7qEEGjFVUiIOS_3SdjwXOJA&oe=688058D9" alt="Camisa pique">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/492120728_1294239999151043_5407979232583929625_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFK-59u_gALNYmxj-BaL57QSchpYU3kjzxJyGlhTeSPPHE3gO_mmuTmaMsvh-CQaRu4qlsuvU8i2bT0iQ_ou4Mx&_nc_ohc=v9yatrj0WbgQ7kNvwE-rO8d&_nc_oc=AdmyDCM082DiR2JT4E_dBmbXcnMMl_cJmpXtYZcEN1AOtU-RdfBS3m3erIXDIhv0Jq-Ruk_sts4KTzAWFWZggKgF&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=Xe2w-4A64iRBDijodgGjfw&oh=00_AfQFQHKYr3iTVacvCIHdy7jIe_sCg8ryDNjDvq4JQCsvNg&oe=6880523F" alt="Camisa pique">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/492009453_1294127959162247_886583178147524580_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeENWVSpuiTI6AejIieLcn3iMjtxkPhpHJQyO3GQ-GkclK40Xop9G-c5WBtvaOZ_P7nCk7e56ShRKzxSOXRCSjqq&_nc_ohc=4DU6SLx5OcEQ7kNvwEkClVc&_nc_oc=AdkInOfOTNikEtwT0MEcsEpBAe8dtAiPRdhKfboWTf0QKfOF6ElanG7upqfvblrf7nOxJ9vR7pAx4HGZiPHKr3Xn&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=EDKEB9I8w9oaRVehqxnNXQ&oh=00_AfRCEPXCVsbs19j7dt-O299ToyNMVUPWYk0SWbYm_bezUw&oe=688041F7" alt="Camisa pique">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/492370248_1294066832501693_3479701522939800546_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEMqMb6-50y6yLR60aaQ0CXfsv3lW1_wJh-y_eVbX_AmKjcof_dwwwrHwmdt5GpmTERzkpZcew2wM20R83xfXnd&_nc_ohc=6wgRMT4DCssQ7kNvwFH2MRc&_nc_oc=AdkdcoF8XsWotulviaeQQbfgXm_jy3P-EElPU-p8JsmqGfrHJmbRS73RmWf2E1AMAPB9E_pREmbC-saJR0RNOEMw&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=PCGzWW5FoYaTkc4ZZgL1_Q&oh=00_AfRkoln8H-4pz7xVXaTTVCNItURrN83YH3SZyY70w1Qxvw&oe=68803041" alt="Camisa pique">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/492348942_1294060379169005_5141069771362307575_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEoScE--lypMkWm87ashhprSHuyRrGjDStIe7JGsaMNK9bG0s7Z9gGGynalu3yZWzJiayOYYhVWRAXmv9f2Wwbt&_nc_ohc=oz9OIow3fdQQ7kNvwFB_r_O&_nc_oc=Adn19yolgz65t9ux55E-jW4TEglI7EnvNcwhyN8ZQrtA7eTUiWxkCo3pKwHWQDRS-mab2k9h6fd9Q9iQ-uG6TsIW&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=MGnbiUsiS21FC-RO2Wplvw&oh=00_AfS_YFNvK1Cx_ifnxRpt9KMiPy9jFjEXtaEl10P4nV221g&oe=68805562" alt="Camisa pique">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/491759272_1289025836339126_2498405440245408434_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHESzvaOvHSsj3Vf3SjcbX17XOXBiITjdftc5cGIhON1_a0596tHKT_N-AMWxqMXnL4ddI6TNyayxf3n-0fv_md&_nc_ohc=ILx5pqt_cyQQ7kNvwEiR-gZ&_nc_oc=AdkHxEXdTkyuWth8AdksSZjexKaA1pgmJLRBBpNwfhhy5bW9D6VkL1kbjJ1QV16WV64v9dS-kbqR3Pm-UkL9dWFU&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=XRHof2ozbYTRVh4LgfPvPQ&oh=00_AfRkvgkOJlF-siAnqv-tXaETvvZY8hQZl2kmXIwUi46usQ&oe=68804647" alt="Camisa pique">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/492078110_1289025819672461_3431391861514523226_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGjp06_mNMebkUgjBq4lXGypt-TVVAoAyim35NVUCgDKK-PxZ7QM5NtYPj0AxhMZ6-KGfUBVA9LR2ZRF9z620tx&_nc_ohc=yh2wnA8jiHMQ7kNvwGPrsHE&_nc_oc=AdnlrAOMECnj7wRNhLmu2az4a3lrJhs6xPw2oXEdyQhniQFVFfM-iMQVGAsEMQnqzm9gP-Ow_o9TRjd4uU_LFV6F&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=XRHof2ozbYTRVh4LgfPvPQ&oh=00_AfR2HvALbpNzSx9fBva2Bd3r49r4U4zAdA_Y4g5tcRjxCw&oe=68804C5B" alt="Camisa pique">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/492005847_1289025843005792_6983940246718707404_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGC7B8yd9oLdL6ZwmOSa6bw5pfrGO_PZb7ml-sY789lvkGhBEoFg8h62u2iwVsBZDSynrvw5SeWltMembpPZoaD&_nc_ohc=zMxPRdVE_pUQ7kNvwEeFGzv&_nc_oc=AdlRV0OAK4UnA4dMuMt5MGPN9kKzz4kPBu5h9jUK_2iDBODs3vsnW2Uc2zgG7lZamSutkshL0x7eOvlSYuCJN6eV&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=XRHof2ozbYTRVh4LgfPvPQ&oh=00_AfSMzDhYb0pA6mrL0VGWHBb0xfwyMNlyMNRxofyMEtKAGQ&oe=68805A83" alt="Camisa pique">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/491419095_1289025603005816_4482388682080074673_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFgS3mZYAreY7qy0FMdqWgZ-y0T1Oe8-9j7LRPU57z72MaLU_trFBX3hWVjDJ_hXkVeqJtqkkz4E9m-esH8pSMP&_nc_ohc=nHEh2sSB-LEQ7kNvwEN-dfX&_nc_oc=Adn4J8lkQyXo8CPThlrTdw5ZDq8F3l1qj3AHVwxCbdp0-EGBzYRRb9HGTNL3--dG2ZkgRagNnmbvDatR_n3f5KIy&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=XRHof2ozbYTRVh4LgfPvPQ&oh=00_AfTMxjKbZnjh9Ulq9O9S6zsKlzhDj9TkGCUR3d8VYRJTpA&oe=68805822" alt="Camisa pique">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/490970314_1288039996437710_425513852015808378_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGsynLSe01o34Vw-OIxefJFJS_WwhETP3klL9bCERM_eZpvIZuc9YE03NZ7MLGJlrgdnnj7qGVEOQ6QahFM4--E&_nc_ohc=qvxWpF1RTIYQ7kNvwHIvL7_&_nc_oc=AdmJ4ldm6tib01GN7tMVdR53Qruc5UITj_nnWLRZzQy2dYG0lbZZN8wnmOB31nyxm6Ff1vCAGHo0ks0qIdgGNR8x&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=z0xuSi2gxlkAhazApgGBTg&oh=00_AfT9Hmm3FJNwXth0ybZ34WtNBAUI5zhEFOTDejOZYRY-wA&oe=6880623D" alt="Camisa pique">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/491935505_1288040413104335_3210453604427087281_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEhqea83KXvcZdp3Kf426P0_0Wx8vFYT5L_RbHy8VhPktF17RgFLaRXpPUxszOnn9ScXw6xRonmTxZ6ipahiQ0u&_nc_ohc=1qhvG5VnEWMQ7kNvwHyuZ7Y&_nc_oc=AdmWGFz1z3ZXKg4bk1bEOpVSx5s_8vVePksi9nzBqC0l5F8_6EhBZ8dzMEXxc7bRPHarB1OdTWviINBewr-j2x5d&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=z0xuSi2gxlkAhazApgGBTg&oh=00_AfTTkESwtBUcKVc0ZEUGeZ8_dCb6i2_NMsHj9N-E1pUSIw&oe=6880394E" alt="Camisa pique">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/491914227_1287948339780209_5324233373759284330_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHX1y05tRPZ-THTgANcBkHeBPB3fR21sc0E8Hd9HbWxzWPbkz8mejkq0nzRMkv-FPonqKKqeKl_UGGuzSSvb_ID&_nc_ohc=oKVBGqGVDgIQ7kNvwHsYUUK&_nc_oc=AdlY27ZLEpJBLprdTU509LPzpD3Bbdvq35K8cpO7owzAEaQiGdHIFxjX-5-fz0Wnr4jt_MJQYB1oqFF1VGhkp7aF&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=z0xuSi2gxlkAhazApgGBTg&oh=00_AfRo_MEHCtnJuKORhoEAHRWYtsLwI8XhYDxViGMEAouOWA&oe=6880450C" alt="Camisa pique">
+    </div>
+      <div class="marco">
+      <img src="https://safetystoreperu.vtexassets.com/arquivos/ids/159252/4505002301_1.jpg?v=638247001925830000" alt="Camisa pique">
+    </div>
+      <div class="marco">
+      <img src="https://mlfsyec2oz9a.i.optimole.com/cb:59UJ.4a585/w:600/h:600/q:mauto/f:best/ig:avif/https://www.mundotrabajo.com.uy/wp-content/uploads/2018/03/ox.jpeg" alt="Camisa pique">
+    </div>
+      <div class="marco">
+      <img src="https://camisasoxford.com/wp-content/uploads/2018/04/camisa-oxford-en-tela-san-jacinto.jpg" alt="Camisa pique">
+    </div>
+      <div class="marco">
+      <img src="https://camisasoxford.com/wp-content/uploads/2023/12/Camisa-Oxford-Parcela.webp" alt="Camisa pique">
+    </div>
+      <div class="marco">
+      <img src="https://textilcrea.com/wp-content/uploads/2024/06/Camisas-Oxford-Parcela.webp" alt="Camisa pique">
+    <!-- </div>
+      <div class="marco">
+      <img src="" alt="Camisa pique">
+    </div> -->
+  </section>
+
+  <div style="text-align: center;">
+    <a class="volver" href="producto.html">← Volver a categorías</a>
+  </div>
+
+  <footer>
+    HERLIZ CONFECCIONES | confecciones.herliz@gmail.com | 📞 963 382 211<br>
+    Jr. Gamarra N° 1010 - 2do. Piso Tienda 205 – Gamarra – La Victoria
+  </footer>
+
+</body>
+</html>

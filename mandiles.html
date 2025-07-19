@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MANDILES | Herliz Confecciones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(135deg, #2196F3, #9C27B0);
+      color: white;
+      padding-top: 100px;
+      padding-bottom: 60px;
+      overflow-x: hidden;
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 999;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding: 10px 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .boton {
+      flex: 0 0 auto;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid #4CAF50;
+      padding: 10px 18px;
+      margin: 6px;
+      font-size: 1em;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      animation: fadeInUp 1s ease;
+    }
+
+    .boton:hover {
+      background: #4CAF50;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      animation: fadeInDown 1.2s ease-out;
+    }
+
+    header h1 {
+      font-size: 2.4em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px #00000070;
+    }
+
+    .descripcion {
+      max-width: 800px;
+      margin: 20px auto;
+      background: rgba(255,255,255,0.1);
+      padding: 20px 30px;
+      border-radius: 15px;
+      line-height: 1.7em;
+      box-shadow: 0 0 12px rgba(255,255,255,0.2);
+      animation: zoomIn 1s ease;
+    }
+
+    .descripcion ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .descripcion li::before {
+      content: "🧵 ";
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .marco {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+      animation: zoomIn 0.8s ease;
+    }
+
+    .marco img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(255,255,255,0.3);
+      transition: 0.3s ease;
+    }
+
+    .marco img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    }
+
+    .volver {
+      display: inline-block;
+      margin: 50px auto 0;
+      text-align: center;
+      background-color: white;
+      color: #2196F3;
+      padding: 14px 36px;
+      border-radius: 12px;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      animation: fadeInUp 1s ease;
+    }
+
+    .volver:hover {
+      background-color: #2196F3;
+      color: white;
+      transform: scale(1.08);
+      box-shadow: 0 0 10px white;
+    }
+
+    footer {
+      background-color: rgba(0,0,0,0.2);
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 0.9em;
+      margin-top: 50px;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    @media screen and (max-width: 600px) {
+      .boton {
+        font-size: 0.9em;
+        padding: 8px 14px;
+      }
+
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .volver {
+        font-size: 1em;
+        padding: 10px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu">
+    <a class="boton" href="producto.html">🏠 INICIO</a>
+    <a class="boton" href="polos.html">POLOS</a>
+    <a class="boton" href="pantalones.html">PANTALONES</a>
+    <a class="boton" href="chalecos.html">CHALECOS</a>
+    <a class="boton" href="mamelucos.html">MAMELUCOS</a>
+    <a class="boton" href="gorros.html">GORROS</a>
+    <a class="boton" href="camisa.html">CAMISAS</a>
+    <a class="boton" href="casacas.html">CASACAS</a>
+    <a class="boton" href="mochilas.html">MOCHILAS</a>
+    <a class="boton" href="mandiles.html">MANDILES</a>
+    <a class="boton" href="bolsos.html">BOLSOS</a>
+    <a class="boton" href="vestidos.html">TRAJES</a>
+    <a class="boton" href="nosotros.html">NOSOTROS</a>
+    <a class="boton" href="contactos.html">CONTACTOS</a>
+  </div>
+
+  <header>
+    <h1>🧵 MANDILES PERSONALIZADOS</h1>
+  </header>
+
+  <section class="descripcion">
+    <p style="text-align:center;">
+     Tu empresa merece lo mejor es por ello que nuestros mandiles combinan calidad, comodidad y el diseño perfecto ajustándose a tus exigencias. 💼✨
+      <br>
+      Agrega tu logo y refuerza tu marca con cada detalle.
+    </p>
+  </section>
+
+  <section class="galeria">
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/494810630_1301895075052202_4647219750190600625_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH_DiNhyGgoMWHP5QtHyjy6EnniFCjGmRsSeeIUKMaZG4KWUcnTUUMIP8RwStW95_R8rB2dt6pQSNq79rKxxeww&_nc_ohc=MtIfhIVXsG8Q7kNvwHfBub_&_nc_oc=AdkWn4EgXMm4ZRbkBIdO--OPt5xYEgrWYTBn1V4zfKHFcxCoJenIaF0fPXP_xfuGW_Np1JZ1TRtUSgLnXOMJF3ia&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=k8W0w7VDf6u_pCmAm-usxg&oh=00_AfS74vkfuOyOttwmRmhs6JrNhVU4mSrNS9HmvaTV04x5Pw&oe=688039EF" alt="Mandil personalizado 1">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/494355658_1301895178385525_4512188158461686769_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHoSdntEoO1S0LOmqLY1yr3MstHN6n5JpEyy0c3qfkmkb1uBq-37GFu4m30h1ZN7-K8AY_y4j4BFaTEhoOm17fc&_nc_ohc=8TIhZIPWiXQQ7kNvwHod7JT&_nc_oc=Adm4dEB-K8WNlaWAc_IM7UBSUn0bVV2Cel-0Ato7ChKqUDXUAmg7drqHZS60aO5pv_oeivj9E9MMOCg7R0_YXQeW&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=k8W0w7VDf6u_pCmAm-usxg&oh=00_AfTfwKjtUoPPrBeu4uq-fZi59f2WghGjxl2gRwnixF-x1Q&oe=68804658" alt="Mandil personalizado 2">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/494470868_1301894995052210_1223624029524490565_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHW52vroHxJZZzkaOkV_7QTUTVzZoXaKgNRNXNmhdoqA17nWn1EjP7_NrxQKGiWvnPOOvZ5E5P3tkJbkMPZdVTG&_nc_ohc=l4O6siAb7HIQ7kNvwFPOdOp&_nc_oc=Adna9ZUDDIl_QHRceFrIFRYF75tukHBaHWiDOOY0sBqGRBV94KQ3cnZxykpR4bzDgY58lZhfLLc2zyxsa8m2_6qc&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=k8W0w7VDf6u_pCmAm-usxg&oh=00_AfS6Jazh7-O8T5fzBxg_t6RofFBy3fIbwLr0RDt0hrIUKw&oe=688057F9" alt="Mandil personalizado 3">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/494486681_1301895195052190_6119473027555996644_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFHtaQkS-u5R01hrBW_q9VVuy3rQgUa1q67LetCBRrWrjmR62nqMhhoDn5-cBqErxy8DK6Q82x18Z66nJ6VDf76&_nc_ohc=Dyxf6Za67DAQ7kNvwE8enBl&_nc_oc=Adln_TQMGMYRhfxHtNEXfEs4qXAoDFHqNP59Krm_SxKftqfhUCZ7vkVRWNZcB41trw5jf1VWvPt7AkjoVpDwab97&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=k8W0w7VDf6u_pCmAm-usxg&oh=00_AfTOv9UTaGgPnIJ9kbCOkyOvKK8YAUh1EZMrHwJOpG8yQw&oe=688061D7" alt="Mandil personalizado 4">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/494449576_1301895035052206_3318709880795866785_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF6aP5qhyd3NtBq8FlD6FQLWaeoeLOvY8xZp6h4s69jzL-KD7R0KtaxJGFXx66RrNF0YaIrrZaAZaTDzfuhtQc9&_nc_ohc=mHJ2pwxn30AQ7kNvwHYwAnv&_nc_oc=Adm_MthGoiv-jHjXmIhWOZfJsDOnI7eG0KzDpzT_-WmrQNGkEqv2m0GsC1kq8RDpZCzMxsYRb9kW2bgLgQJyvQ29&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=k8W0w7VDf6u_pCmAm-usxg&oh=00_AfRS8FUW-NCSqUjn0OkIgxJs-EZG4F3FzwvtdXebnzHoDQ&oe=68803476" alt="Mandil personalizado 4">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/490381771_1283078310267212_3784833608091452392_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFOZjyyCCANE8KaYOI9Ljo41QlbEa29mc3VCVsRrb2ZzUqoHDSZj-56BUi9TKrV27355eYSc23MlrXd-YeQxPaL&_nc_ohc=860KaNF13cUQ7kNvwHvFJCo&_nc_oc=Adl0iWuFgWbt4_Wj-FCYSIcNO5fFOE8FKBCFfrjdismiN0olcW7VTrZFZauP_7ksT0F0vE-umTv7X76ZY-BqBbQZ&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=Il6mrW8WfMfp5ItfUbabxw&oh=00_AfQ6ywjgZroq6q3CtivlCniL5SIci6Xxv4SkFJ5RGl3p-w&oe=688046E2" alt="Mandil personalizado 4">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/490408571_1283078330267210_6111330063026402967_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeESc6YsSlFpwTKwe1vA5Nz8WrYuUOOeJb9ati5Q454lv7RkSEiHUe-sd9sMaAIQNhcjOE7kYyRWPPmWr5qwjrsf&_nc_ohc=Q-AaBi2Sq8cQ7kNvwHds0Q-&_nc_oc=Admo4PIwikCMJC1JwqGnLGe0ie_FxX9JSqhxEYIR1tKaf3-DgJudyrJMHbGDQmcsT4DymdgYvwNP63W89nWrbccj&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=Il6mrW8WfMfp5ItfUbabxw&oh=00_AfRDWaP_zZAyR5LdlZzIkxj6_tjOrYwJbyZ79ceEBGXgbg&oe=68804986" alt="Mandil personalizado 4">
+    </div>
+       <div class="marco">
+      <img src="https://i.ibb.co/bMWdCXmv/mandil.jpg" alt="Mandil personalizado 4">
+    </div> 
+     <div class="marco">
+      <img src="https://i.ibb.co/WWWpK3xR/mamdil1.jpg" alt="Mandil personalizado 4">
+    </div>  
+     <div class="marco">
+      <img src="https://i.ibb.co/d9NRdY3/mandil2.jpg" alt="Mandil personalizado 4">
+    </div> 
+     <!-- <div class="marco">
+      <img src="mandil4.jpg" alt="Mandil personalizado 4">
+    </div>  -->
+  </section>
+
+  <div style="text-align: center;">
+    <a class="volver" href="producto.html">← Volver a categorías</a>
+  </div>
+
+  <footer>
+    HERLIZ CONFECCIONES | confecciones.herliz@gmail.com | 📞 963 382 211
+    <br>
+    Jr. Gamarra N° 1010 - 2do. Piso Tienda 205 – Gamarra – La Victoria
+  </footer>
+
+</body>
+</html>

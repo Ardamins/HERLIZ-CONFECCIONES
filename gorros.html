@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GORROS | Herliz Confecciones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet" />
+  <style>
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Rubik', sans-serif;
+    background: linear-gradient(135deg, #3F51B5, #9C27B0);
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    animation: fondoHD 20s ease infinite;
+  }
+
+  @keyframes fondoHD {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 999;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE y Edge */
+    padding: 10px 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  }
+
+  .menu::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+
+  .boton {
+    display: inline-block;
+    background: rgba(255,255,255,0.1);
+    border: 2px solid #FFC107;
+    padding: 10px 18px;
+    margin: 6px;
+    font-size: 1em;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s ease, transform 0.3s;
+  }
+
+  .boton:hover {
+    background: #FFC107;
+    color: #000;
+    transform: scale(1.08) rotate(-1deg);
+  }
+
+  header {
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 2s ease;
+  }
+
+  header h1 {
+    font-size: 2.4em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px #00000070;
+  }
+
+  .descripcion {
+    max-width: 800px;
+    margin: 20px auto;
+    background: rgba(255,255,255,0.1);
+    padding: 20px 30px;
+    border-radius: 15px;
+    line-height: 1.7em;
+    box-shadow: 0 0 12px rgba(255,255,255,0.2);
+    animation: fadeIn 1.5s ease;
+  }
+
+  .descripcion h2 {
+    color: #FFC107;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .descripcion ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .descripcion li::before {
+    content: "🧢 ";
+  }
+
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+  }
+
+  .marco {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: zoomIn 1s ease;
+  }
+
+  .marco:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 25px rgba(255,255,255,0.5);
+  }
+
+  .marco img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(255,255,255,0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .marco img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255,255,255,0.6);
+  }
+
+  .volver {
+    display: inline-block;
+    margin: 50px auto 0;
+    text-align: center;
+    background-color: white;
+    color: #9C27B0;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .volver:hover {
+    background-color: #9C27B0;
+    color: white;
+    transform: scale(1.05);
+  }
+
+  footer {
+    background-color: rgba(0,0,0,0.2);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 0.9em;
+    margin-top: 50px;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  </style>
+</head>
+<body>
+
+  <div class="menu">
+    <a class="boton" href="producto.html">🏠 INICIO</a>
+    <a class="boton" href="polos.html">POLOS</a>
+    <a class="boton" href="pantalones.html">PANTALONES</a>
+    <a class="boton" href="chalecos.html">CHALECOS</a>
+    <a class="boton" href="mamelucos.html">MAMELUCOS</a>
+    <a class="boton" href="gorros.html">GORROS</a>
+    <a class="boton" href="camisa.html">CAMISAS</a>
+    <a class="boton" href="casacas.html">CASACAS</a>
+    <a class="boton" href="casacas.html">MOCHILAS</a>
+    <a class="boton" href="camisas.html">MANDILES</a>
+    <a class="boton" href="casacas.html">BOLSOS</a>
+    <a class="boton" href="vestidos.html">TRAJES</a>
+    <a class="boton" href="casacas.html">NOSOTROS</a>
+    <a class="boton" href="casacas.html">CONTACTOS</a>
+  </div>
+
+  <header>
+    <h1>🧢 GORROS PERSONALIZADOS 🧢</h1>
+  </header>
+
+  <section class="descripcion">
+    <h2>‼️SOMOS FABRICANTES - Pedido mínimo: 12 unidades</h2>
+    <ul>
+      <li>Gorras clásicas en denim lavado tipo gastado</li>
+      <li>Bordado personalizado frontal</li>
+      <li>Gorros en drill tecnología, color blanco con logo bordado</li>
+    </ul>
+  </section>
+
+  <section class="galeria">
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t1.6435-9/50073957_1999581930138452_1664303447857430528_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGMXNaL2uUiwcomzFE_tBTx0ZqQJ6NM0EfRmpAno0zQR_BKy4tPd1_owfDRinOyGbSZyWYGch-TSM3CkZ3A8ug1&_nc_ohc=DIsGitwdnioQ7kNvwEGnTo4&_nc_oc=AdkPh5QMvWTUGtT2miMYqXN1HfUnqIx4-_1hF207jBRBGOtjGuQL_qA2qv-ymR-fT5L5KSjTVdYk1UnaHCi85ZYa&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=siN3DUbhCN01umrO6CMYGQ&oh=00_AfRYjkCmxdk27PBgTG0w2CBJTgWVvouhJgtXLmANAf_xig&oe=68A1E917" alt="Gorro 1">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t1.6435-9/49295990_1999581963471782_1930457889676197888_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEIxhV-x53Di8VAmLGb7BressP4bGN1I7-yw_hsY3UjvxtQxB6ior7ndZ-18IDAmA_QpXpPA69LdwBS4gFSKhaV&_nc_ohc=Cmf29672KIYQ7kNvwFocjy3&_nc_oc=AdlrcQoS1hLN78c3bj9Qd1OJzcrHDsjnaNRlRjHDZh0tqlyByNvU0BSSbtp0wCHdIC3iENj7fY-c5f0zHEMWV4fV&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=siN3DUbhCN01umrO6CMYGQ&oh=00_AfQpMHz_nQXMkCJyWgCkKJE8FNGJp5Qa7YhmUjAtdTIDyw&oe=68A1FE3F" alt="Gorro 2">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t1.6435-9/49718047_1999582033471775_1494800733864722432_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE-HMI2HUyUqkKq-TrjCC38-4Ft3fLF-7T7gW3d8sX7tPkWupnGT3-JC1A3yeIJW3OXRy_jjX-TRvxZ3QgKaNrg&_nc_ohc=5H-qWZ-E8R8Q7kNvwGoCDvI&_nc_oc=AdnikHYZxdtKFelQNFVRUWbyp-_vRwZTksX6vFvuhyYr_mwcJY1Rh5i9l7QH4duXZeSzybU1jWatodoCrtl5BEk0&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=cmQooQNU6e8NFh0nBdZtww&oh=00_AfTUuDKcmXrH4jFZVeEZYXB52fqLjhteiuZcSHKAFXShDg&oe=68A20CED" alt="Gorro 2">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/493023201_1297983068776736_3439911174408474377_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFkBEWVZxQ_rgoDfNsCUI_FxTEeZicViFHFMR5mJxWIUQ484aCnCjHRGZxWus0fth3_J1x7JXy4Tnh1vS23tj4j&_nc_ohc=l4wXVyIjySQQ7kNvwGLmfHH&_nc_oc=AdlDyEEDbG4sbChFEoar2L2mEl4C4cbd7JBOkTw0qjJA7KSaY9SpiSqXUbdxKOzKbFN7L2LnLb0ZXaLR6nVeUL1r&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=_onIz4McKtOgxaeh5tU-Cw&oh=00_AfRwGeVFQ4baKhV1cIu3TizplRNvVHpIP4AqADJxI3657g&oe=68805E36" alt="Gorro 2">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/494077424_1297983102110066_5939265972318179028_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHIenvjymCMb5cJ3gvNaW9MpFX_o0OmL-akVf-jQ6Yv5rTIXBfCmzJB6nK4nZfUffZuqsEEFLZQ-87zDUQSlzj9&_nc_ohc=WSlRDSl84vkQ7kNvwETDwtL&_nc_oc=Adl1H2F6IG4yhmXJ5eVcZ5PQrFu_zInJDBwU2Vkk3xbbHSKCf7uGMzxfBkNseAdFFwKlE3GClcIZLeBX4XhSRTFH&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=_onIz4McKtOgxaeh5tU-Cw&oh=00_AfRk7hl4AmpPmn7yti2z-Vatgq5lXGIScP4v25UMOHsL2g&oe=68804058" alt="Gorro 2">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/493086240_1297983045443405_196178645939835663_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE8su9jCx5HhjIDvqsk14Zani0liJpLteCeLSWImku14AMg5qldJaD6FgarT-cCMOGiD2Fwgb_Xzns8h23O4vIT&_nc_ohc=N49rFS7J-8EQ7kNvwFTpglp&_nc_oc=Adk_cqSq8xkY6twPWg1d0f3RpeIyjVnqGiT432gcsPdGK_Ygt1zc3Ol1Q0HPPlkP1L2auPIAkkIttfS1p4Wx-aBD&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=_onIz4McKtOgxaeh5tU-Cw&oh=00_AfRCIuSPesxDXdxP8UwJ0F3ruBJsfH0B77l46uSx2nStZg&oe=68805C97" alt="Gorro 2">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/494099680_1297982785443431_1117099309316395079_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFnLlnqvyjil83c5tt_hkPUeFuSw3nlelZ4W5LDeeV6VphfOpJu7pjl_mKmS1fTHJhqkGP0hiA4itoGW2laJ-nt&_nc_ohc=pLcdo9iv22AQ7kNvwGE1C0s&_nc_oc=AdkZ7GSTil_iRYIZECSIT-ug_ltoeftYrCb7XNB--dS2o_6hiCSgnkrz0aADeZCKhDZyapG58Toa3IVy_lHJ_413&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=_onIz4McKtOgxaeh5tU-Cw&oh=00_AfRD4Xb-EFKyTSZfR7RVFKLFhtkkRK9HXRDKZS_xMYjZBA&oe=68803A00" alt="Gorro 2">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/492570897_1294248712483505_5166603431252766321_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHEii7m-7-mX9NB56cxh4MPS15P15VCdlRLXk_XlUJ2VPHy0okHdckOh-_0NeKPIoHhrP3JE2cXCUikxPFtw4OQ&_nc_ohc=C1WXfZm_2JcQ7kNvwEZyZFY&_nc_oc=Admz4PCEQtlg4_dWLDmMSiWvrvOIKaFF_1FoYHXzfXATtw-SyYiEW9yu3EMlCKKJo8N7xd8nAOyznGe_dsHCuX7i&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=LmXqvhwh4yYlXEWO8c6Ijw&oh=00_AfRIWVRLCEYPsNEhSK2PLlT3UPjekN9BMTLDlTsSES18yw&oe=68802D4E" alt="Gorro 2">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/493289061_1294066932501683_5300914370882856224_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFURsmyFaV-B_gjkFFw2jIhIxwfVQ_zieEjHB9VD_OJ4V1ITYKtWUK4XmwFfA8gt4_A7q2_vhcwdHB1OoM27dAn&_nc_ohc=64liLibOyAAQ7kNvwGi47Yz&_nc_oc=AdmrpeKuWskGe1VEEz6EVlyZnb7amNvop1NlPtcO9dBs2dVUMhc87AaP0MOPnSQrfO0zI5tGK1A1Vp6S-KfL_Wpl&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=PCGzWW5FoYaTkc4ZZgL1_Q&oh=00_AfSkGJbYWxb6vb-8bBeeJwCgDpW8qzYIAwE7lzJtTq1wvQ&oe=68805FDD" alt="Gorro 2">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/492032093_1288772256364484_7626857166851797749_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE0GPc_WSKf573ZeYn10KfXL-QsosIKK9Ev5Cyiwgor0Y9QeaDl80mjDMS9Y6qYuW9hSbf2yFh-mlQ-luTHOyn9&_nc_ohc=dEhn_nzaJlUQ7kNvwGjs6Rb&_nc_oc=AdlCTkBf7PqoGnC_LGdGW0DwZlXZeZZna_B9TLvmDUbGTZ596h4WqIvviUIrqMig63dQvPRKcnuO3o_3MzUDb7kn&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=kpdePZWAlZWHI1vDHhF2mw&oh=00_AfT_LIPO80ZTrOXeiv7rIAbs0xOZy7FqiW4iYdiyXU5ULQ&oe=68803B4B" alt="Gorro 2">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/491577263_1288765813031795_4137816704777021404_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFu6MpKGMSX03zJ_Ta6HkhNHb3DLY4nFTAdvcMtjicVMFPRYAAIY1SWfWv8CG9HJqU5KnSGa07Z6WkYfsNu9Z5B&_nc_ohc=uURKg58A9T8Q7kNvwGqGkFj&_nc_oc=Adlc7SpbTtFmhi6S7KbCUiEvQrVYNUdg5h5FL8fk5HgDjpF_VJ-2cA--atcEW-ZZGDfod8_zgTexneivg3oHYZi6&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=SHtiZyqIQLuES_2LHSXnfw&oh=00_AfSNo_TJpqIObxNG0c89slzHo8I1QZhQFyGQd0F13NlZLg&oe=68805C56" alt="Gorro 2">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/490444646_1285170273391349_3422326537953024477_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHZF7mJddBi8_AtptM4S0o_-FGExteLFo34UYTG14sWjUZFYkfyn6FHPk5hPSUKB6s8B2K4i_swR6U6NN0IXo3S&_nc_ohc=GWVkT_K0JewQ7kNvwFreSG1&_nc_oc=AdlSo3auUtJbcNw5HlsMgm6EAKuOFsWSHPwFS5PH0rK1wobV5LOrrW0nVz7FKxG9sFbyrWIGZbQeZTXI2MlZY353&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=QaUuqo0HZpQgotjnW2aHLQ&oh=00_AfT5Kg6p5b5UAMZWdYR8jBCniq_Ta8yZe2EqkOnFxNgMwg&oe=6880515D" alt="Gorro 2">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/490461903_1284694423438934_6854753523320190428_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGjcjymChhXCEtXixv2mtNbtNrrNaNs9lm02us1o2z2Wd_Irjf4Yt-_yVAVPKNQMWwruIBmNPCmxk472fSr0GXc&_nc_ohc=9uf2_urkaWIQ7kNvwFwzm4G&_nc_oc=AdnI_EnwMOL9p_UkdxWirfzedt1p4j7TZSX2pB3MhILRiL7U2AFpTP97SkcHQV7xT830izGSvmU-EeAOlWbRaWku&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=7JWT2-NO1B41MLGhct3nqA&oh=00_AfTg_eJNqapyBph2dZmm2Xi9bf4EKtRBWxg91X2dGLLaTg&oe=688059B8" alt="Gorro 2">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/490496212_1283078386933871_5848226459461830231_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGfdtDBzPg4DvAuEoK9gjhZLBpqCPAR5D0sGmoI8BHkPaNbJh2iW0fM3ng7fIBdop1pKSQZw2Bd1Tn-CHIbEKQS&_nc_ohc=V04jVt5JSikQ7kNvwF4m6VN&_nc_oc=AdnRoJhkSXC7PzPgBnoYLX_argQLz91aG3Q-XokidNUkNezThX54qs7SH5LaGu_a5ADcKyLXSX44sDhpHO38lX3Q&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=Il6mrW8WfMfp5ItfUbabxw&oh=00_AfQ_lQRUuDqszz6yUdTOCVWI4GLZk2sO84qvfbmYJ0cYZA&oe=68806176" alt="Gorro 2">
+    </div>
+    <!-- <div class="marco">
+      <img src="gorro5.jpg" alt="Gorro 2">
+    </div> -->
+  </section>
+
+  <div style="text-align: center;">
+    <a class="volver" href="producto.html">← Volver a categorías</a>
+  </div>
+
+  <footer>
+    HERLIZ CONFECCIONES | confecciones.herliz@gmail.com | 📞 963 382 211
+    <br>
+    Jr. Gamarra N° 1010 - 2do. Piso Tienda 205 – Gamarra – La Victoria
+  </footer>
+
+</body>
+</html>

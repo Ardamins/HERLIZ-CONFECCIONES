@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VESTIDOS | Herliz Confecciones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(135deg, #2196F3, #9C27B0);
+      color: white;
+      padding-top: 100px;
+      padding-bottom: 60px;
+      overflow-x: hidden;
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 999;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      padding: 10px 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      animation: fadeInDown 1s ease-out;
+    }
+
+    .boton {
+      flex: 0 0 auto;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid #4CAF50;
+      padding: 10px 18px;
+      margin: 6px;
+      font-size: 1em;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s ease;
+      animation: fadeInUp 1s ease;
+    }
+
+    .boton:hover {
+      background: #4CAF50;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      animation: fadeInDown 1.2s ease-out;
+    }
+
+    header h1 {
+      font-size: 2.4em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px #00000070;
+    }
+
+    .descripcion {
+      max-width: 800px;
+      margin: 20px auto;
+      background: rgba(255,255,255,0.1);
+      padding: 20px 30px;
+      border-radius: 15px;
+      line-height: 1.7em;
+      box-shadow: 0 0 12px rgba(255,255,255,0.2);
+      animation: zoomIn 1s ease;
+    }
+
+    .descripcion h2 {
+      color: #000000;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .descripcion ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .descripcion li::before {
+      content: "👗 ";
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .marco {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      transition: 0.3s ease;
+      animation: zoomIn 0.8s ease;
+    }
+
+    .marco img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+      transition: 0.3s ease;
+    }
+
+    .marco img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    }
+
+    .volver {
+      display: inline-block;
+      margin: 50px auto 0;
+      text-align: center;
+      background-color: white;
+      color: #2196F3;
+      padding: 14px 36px;
+      border-radius: 12px;
+      font-size: 1.2em;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      animation: fadeInUp 1s ease;
+    }
+
+    .volver:hover {
+      background-color: #2196F3;
+      color: white;
+      transform: scale(1.08);
+      box-shadow: 0 0 10px white;
+    }
+
+    footer {
+      background-color: rgba(0,0,0,0.2);
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 0.9em;
+      margin-top: 50px;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    @media screen and (max-width: 600px) {
+      .boton {
+        font-size: 0.9em;
+        padding: 8px 14px;
+      }
+
+      header h1 {
+        font-size: 1.8em;
+      }
+
+      .volver {
+        font-size: 1em;
+        padding: 10px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu">
+    <a class="boton" href="producto.html">🏠 INICIO</a>
+    <a class="boton" href="polos.html">POLOS</a>
+    <a class="boton" href="pantalones.html">PANTALONES</a>
+    <a class="boton" href="chalecos.html">CHALECOS</a>
+    <a class="boton" href="mamelucos.html">MAMELUCOS</a>
+    <a class="boton" href="gorros.html">GORROS</a>
+    <a class="boton" href="camisa.html">CAMISAS</a>
+    <a class="boton" href="casacas.html">CASACAS</a>
+    <a class="boton" href="mochilas.html">MOCHILAS</a>
+    <a class="boton" href="mandiles.html">MANDILES</a>
+    <a class="boton" href="bolsos.html">BOLSOS</a>
+    <a class="boton" href="vestidos.html">TRAJES</a>
+    <a class="boton" href="nosotros.html">NOSOTROS</a>
+    <a class="boton" href="contactos.html">CONTACTOS</a>
+  </div>
+
+  <header>
+    <h1>TRAJES PARA AINFRITRIONAS</h1>
+  </header>
+
+  <section class="descripcion">
+    <h2>Modelos Disponibles:</h2>
+    <ul>
+      <li> Licra Brasilera</li>
+      <li> Licra Coreana</li>
+      <li> Logos, bordados y estampados </li>
+    </ul>
+    <p style="text-align:center; margin-top:10px;">📦 Haz ya tus pedidos</p>
+  </section>
+
+  <section class="galeria">
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/499977497_1319506579957718_950234494736163261_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHPNY39GhSIi6gW_BlVDQ3kVBFpMSfwNlVUEWkxJ_A2Vb6hFvpBhF23fsGsiTcUpfyMCpzXO04ypM8aoYOR7UFl&_nc_ohc=DNrbsQsMCpwQ7kNvwGKtIJP&_nc_oc=AdmBN1qQnyKUr-ATRnSCTNYMMOWem08bXXA6Fe0wE15_nWmCY_6OAcsek3VkhlMe3cU1MOt-X-rjQN70_iLmQ--V&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=6bFIBPDJcSVM7OrVR2jjlQ&oh=00_AfT2XRm2Uj0yhWr_mp-shcBaRMqBWld7t8gK5s2vf5psrQ&oe=687F72C5" alt="Vestido 1">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/500042096_1319503603291349_4253404026490637854_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFAiZ-fhpDkEQIomTCQ0uer55_A_hsTHUHnn8D-GxMdQfMZxsGeJHzyEUurvdbtdOsFGRogn5PMsp1qVg8mILDk&_nc_ohc=e139-10UjOgQ7kNvwGL64i6&_nc_oc=AdlcHJOfLBV8Nh0qYfxUZ1XMK_jWn9ZgO7iv1R2oksaZ_cOubuTetR85141oHwWRw0Iu9v1gRGUFSqCPHDRjg7n5&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=6bFIBPDJcSVM7OrVR2jjlQ&oh=00_AfTJPQ2Aa5y61Jv2kuI6DxHGjSC1kkj9yLGGDfRd6Rn8qQ&oe=687F8F96" alt="Vestido 2">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/500068068_1319505776624465_4065825450702457338_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEGT_nsD3_cGIHac4UUKz1duO39p7TGXH647f2ntMZcfsEkOrXdvmOxzR2HskYvwQkdw73C8Ha9YVQ1SYWaNfql&_nc_ohc=eZPfzY-TeXMQ7kNvwEAeEqc&_nc_oc=AdltrTa4OLK0N4pN6SmMVr5R2SNnxz7FijSVRYnsiHOZTGU9qG6m_7qj8r6up1DuHtZPhgqJSF8vtuvJKHj28sYC&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=6bFIBPDJcSVM7OrVR2jjlQ&oh=00_AfSqSOondY2141BuOTi2t4dKtaLRed2p4Xt3ZXb460RC1A&oe=687F926C" alt="Vestido 3">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/491955789_1319507216624321_8884541267203598508_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEjxjdh4dXPvnp4gYNubZsBPOIhvFB_-ew84iG8UH_57LpVM2X7ZuNG-tziNvmfRK2c5A8PobHEYeckPjMv9gIE&_nc_ohc=WBzKpfZWGpQQ7kNvwE-JFmP&_nc_oc=AdloOAUjOSFA-AoT51NA01EiOmylUZXqzTzEdyj3Lh4dxXOo8mnc4a-yMUuXJEw0F5OSQj4WkfAtflhdfikUy4Ul&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=6bFIBPDJcSVM7OrVR2jjlQ&oh=00_AfR8715LD3Ct8FH5V-0wRqPkPPafH-uqkJwoEEs8400w2Q&oe=687F6439" alt="Vestido 4">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/499479479_1319503019958074_6003713186292080745_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHinbmrOv8oJiiXcJX1dNjOu9CzXBh6_9m70LNcGHr_2bHatz99rgtNoYVcSa4DcfQyDP9WItpcXpDXcG1mSU2D&_nc_ohc=iEwBhEp2flkQ7kNvwEG2JEU&_nc_oc=Adl_zeKw5t64q1FZu60qkhtSnmv-oWPSM_shY06_ipjXZHCaDfkmAYWN6Q8ksNlLXn5lo-M4oDQECyMTGrz81VGS&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=pkn70X638pwRvK0-oT6_Ww&oh=00_AfTLGTjnmzgi5Fn_L4KBQawMu5g6-5U6NMKgqoloDu0Dbg&oe=687F6536" alt="Vestido 4">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/499267224_1319505413291168_2750604086991998522_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEJfqDr1j3W5kh-DRl93dbDJSwoJW4B9lolLCglbgH2Wmwlyq2Pg28xq9kuW2fJllBA2_WGQ4I6Twf0lXd8btav&_nc_ohc=SDCCrLqjrnEQ7kNvwFt49lC&_nc_oc=AdmEPFG6n8INZ-La1snjD8K53NRacU2EVoiH9XHSuqjqpse2sjlx3AV8ox7IN8MauhIsseiu5FTAOcf_MR4IF3em&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=BtWT5uX8zApFvDCyC9z8dg&oh=00_AfSv7N5dDckjkfb8YK6egUcrcH-rWkBVIvzy4o1qGRm_EQ&oe=687F78C2" alt="Vestido 4">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/500197147_1319506733291036_3006593502203478325_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFLWXa_4ZqZFCAc6PUfnLZ6omFHRD7Dje-iYUdEPsON77QmTTKH-DAfelUhIYhb6FKUcMCIAv2jNhINXbygsi0E&_nc_ohc=51WhTlXJLREQ7kNvwFC6pI0&_nc_oc=AdmHSBbW_4rv-UdaWaHxISo6yB2D8-gMLFyUQEDSEnbyPxypeR1o5bOp-rzOeS3q_a8Sfi8E-w7UeE3exV7t2nWm&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=d40iX7zl7k03VQQiPTucvQ&oh=00_AfSNGp6k2YKhlUQndsZwxKalGj4U3mcWoS4lLnBTCI7iVQ&oe=687F71CC" alt="Vestido 4">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/499476545_1319505129957863_7752683576714267266_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGmDSvsYbWTTFG4g0oCtK2sFlRm9aQu-6sWVGb1pC77qzxq1l-CuoVA_CxZrhSPKCl3k0TaqeKyt_dUIvH38eYW&_nc_ohc=rwlbIa29tGYQ7kNvwHT3yiO&_nc_oc=AdkgVZMNDPGyh3U8FdnDuVFbGBvDgpRwyVi74xEeNnQhTf7rWn2hOFwO-PmLDkMZyHTRVA5q3hUaStVp7bQYFUa3&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=EGnnxyLpMwmfHgOsHlhcdA&oh=00_AfQe-XGl7c3lHHCCSktQAbJMEvyUtIjNBgq_U5-xdUfJbA&oe=687F78BD" alt="Vestido 4">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/493925492_1300362595205450_1182139599800856112_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGn9EqcODgRG4gwBzgcR2lHeYVraVgmq6d5hWtpWCarp6c9Tdq7N3xamJroUtMqUPWXR4AJXg8TF4ZvUbTWU0QB&_nc_ohc=IX-rUrQrXsUQ7kNvwHvGLKI&_nc_oc=AdlyrVNlobVfrdUqzBSA8v-K6izF16gqvNs_ew8hPCp0mMW-ojmowSd53X5eLUyNBiMcqlC75pLDUtKXsvydT8A3&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=aJ34Qm8Z94FSeiy5C-Hyvw&oh=00_AfS7ou9tsTtsx_vaeA7oLo3ef-58QcRy5s25f7L1Uicckg&oe=687F6E52" alt="Vestido 4">
+    </div>
+        <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/493325050_1298972505344459_4143543929932086111_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHwPJNeMZeTDcp35MZI7A4OF2sMdGEORr4Xawx0YQ5GvqnYlPNrBI2t4h74CCNWpW71vZQKJ1xlvjSjAQCRi2Ln&_nc_ohc=yX0zpw5rP8IQ7kNvwFcyWX0&_nc_oc=Adnwv_3S2-Zwlpr4QrwtQ_iVykGBaUalqHL-RyEqBtv7gSTglgxdeonsYkYerUfcSZ18anBEJ-IGFmW-ddKfKXIc&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=tTL3JfDKUqlasImct4LKvQ&oh=00_AfT-KUVdh42addK2YGP8UgUdQsty2Q7mIBq9Wzj83WSQHw&oe=687F8052" alt="Vestido 4">
+    </div>
+        <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/493731432_1298972295344480_4300129929495197342_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEUx-3u4kKYjmAnogvAwOZ0yKd4iPnTvHDIp3iI-dO8cOAc2dnD17VUwQ4KklZNTv8Hmo8YWt_OCH-CJAnOpzLN&_nc_ohc=MS027ce8AqsQ7kNvwHbbhY9&_nc_oc=Adnqmur4XAhRC_X0dE8sl4qkWxxFjAFyqFibQmvtnJAf5jkom8CRahVBtbKFZdYGKM5NShWk7o4GKNkvwwkp_yL9&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=-0dvdGbaULC4aS9_D5fVsg&oh=00_AfS0llfSx5NKO6B6muxrRV4S1U_5a76DzlorubX-sm6xLA&oe=687F78E6" alt="Vestido 4">
+    </div>
+        <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/494397579_1298972522011124_1293359930195345456_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGV9obptPRxXSjsP7ywX97dUF8R0cP7BjVQXxHRw_sGNemFEnl80CxiNbvAc8FR_6Hq8oe4ghBQrglKoRhMos6d&_nc_ohc=VbcmfoGsQ8EQ7kNvwFZkUjj&_nc_oc=AdlcxJFOAesMZRe0bAXtsC7JjQxoiw3Lu10LFQ3PuiwKDP2uJwJNcO3Z7toc_vXIB0lqSScEB70AzyQgwRB0tAt1&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=9mU60srnLPEAamRdCQMMYw&oh=00_AfRPxk0EOyWAUgt3WOXwm2PXWQ3BGegGzPtSvRZ3rtoirw&oe=687F83FF" alt="Vestido 4">
+    </div>
+         <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/490473335_1287142606527449_5809315500270657880_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFLLJ9zQciOVAZvMib3InQ5arAr_JxKUK5qsCv8nEpQriD7pk6lCO7rQRt82uJ5xZyvZnrN-jGdFvSI21tDAOQ9&_nc_ohc=RVaf7T3hOlAQ7kNvwGrGIV9&_nc_oc=AdmsiWrY5yfB3uYsIf-1IA0fGGN4cXJGn0CNyvrUFzon-LKVkh_gmohXyt-uXOhLIKpyiLBg3-AOb0CSUsN_7kKJ&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=ExLYEyyQGBvvgy0fpbXzrw&oh=00_AfTZTYiqsLZZZ3pvng3Xfqqez6kwT1F1gyU55j4I4E75lg&oe=688077E5" alt="Vestido 4">
+    </div> 
+       <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/490790605_1287142929860750_318998470586074772_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFv2ITreUUT_Ua6kkT_4mjzcLaXJeV9TDtwtpcl5X1MO0VeXqMD6GW3DIONYJn78dttmJ34fOTI7cXDO3MHtog9&_nc_ohc=bphwlQM9XIcQ7kNvwFXDAlo&_nc_oc=AdmNh6Kr4RCymUbvRMBbKT0QP1npIwRgZteP9nPBa6VYXvZ93m7aGVZye7E_qoGI_1FuyqV7RZw4Beh1UayB5cFK&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=49n1UBQ9MfI9fJiXBibeCw&oh=00_AfQeG8Ur0Jj7viy1ZxBFFh6A8alC_Sufbx4Q9coF6IjWUQ&oe=68807785" alt="Vestido 4">
+    </div> 
+       <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/489435559_1286768243231552_500675292331962587_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFn3DROui_NFOS9opqzdu_vKC6rewXCwe0oLqt7BcLB7X-WEZBrFzUjbm8rmG4OIrzV83jE37Qkprou06zuP3v2&_nc_ohc=2GEaBTlkBzQQ7kNvwE00DR8&_nc_oc=Adm33BUtO1wXnGfjWRmQVnQVDutvHOlm3foQGfrYg9gKSS7NDIbY1DPwX3acw2oojXIBEunInYxus__G-NV1B43u&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=CYa2o3Juz9ZwGOfIX0oIDw&oh=00_AfSIPi3gONkTjkFwiL8VB06oOIbqbo97eHpOuBHgLnY0_A&oe=6880695C" alt="Vestido 4">
+    </div> 
+       <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/491526906_1286768323231544_8812345739170299595_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE6-9BznLi-iTSNnbJ02-pVuZMXNSIZ6E-5kxc1IhnoT1DygeKs3q7WUFD1xlEFIHDsxV-CI9Nz5thuZPVBuTpo&_nc_ohc=r2-R7lAX14IQ7kNvwFTAvYO&_nc_oc=Adl2k8verh6tnL6j6hnTb4oPRKunUVaPfqsy2SOr4A5lqWIw5AyYGMW8xPpVAuz1kZclS5Ehnf2VbV2nRKQHE9vA&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=pCxVELJLoOxHMXnk_o5hvw&oh=00_AfQM5BRv-SD4pMD3DI-RDq2bJko3us2zQjsGfs3KvyUfBQ&oe=68805E24" alt="Vestido 4">
+    </div> 
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/490505918_1285913693317007_5917178630513916986_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFZ6ai8TSfRMerShgrFGNsghalntU0bTfyFqWe1TRtN_LvlwfW6K7IfWoKc4vwk-5skAXS5cARoy03y8ZDSPuaK&_nc_ohc=5eKqUTRZK9wQ7kNvwFAUVnR&_nc_oc=Adm177TmStLBnbK7ujeR3rRtfsAGl0GCv-zjN_3IN4Nr35iVCScOZvHmiT8p5nCgMSF0-01gUzf3kiClO6n3cIIC&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=NK8j3KodLKR0_Rmg-6xdcg&oh=00_AfRpiiqesplJCGWgwvLtqcAVMubb4aD3Ub02joTjWwZaow&oe=6880485C" alt="Vestido 4">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/490536916_1285913443317032_9095997671980495301_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGmsgkqaEFtP4G8gTa46EplYi6OIP8G_8FiLo4g_wb_wfhydQObh-O8br08HT1Z8GnjkfLOCZW7bzCsL_LOch1z&_nc_ohc=n7LHu3jAhMUQ7kNvwHZxkzP&_nc_oc=AdlRB5pC-n_7D3ojzlp4SqhUjj2ncUyraHtwuYqed268CRX4_tRVZnnOzCkstkon22F9M0FJZ9pqhMn5FotaGkQY&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=NK8j3KodLKR0_Rmg-6xdcg&oh=00_AfRBT3A49hPMv12mhJGI3ivQnw9BvXEMNkCR21zStM_QUQ&oe=688037F6" alt="Vestido 4">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/490629965_1285913629983680_9045381404540503666_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHgj5VLAp8-NTc2cP_2BgToVALy5VYnJvlUAvLlVicm-X9GvD6GhaSh4vN-_nYr_UcvnkMBzbAbH-32-lWi3z31&_nc_ohc=tMKJD5YxAnAQ7kNvwFtYdXC&_nc_oc=AdnNrubpheO4So8WDr7i02ny2ZZOMQJPzDNs3YIHEUlCkBPVOpNdw8_56wuInlD3GKrsoknSd1v5HZPu5fwBjV_o&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=NK8j3KodLKR0_Rmg-6xdcg&oh=00_AfRBfdF1Aew7vnRaus07fBQYLwhDuEweZtgVoak_utF4VQ&oe=68805839" alt="Vestido 4">
+    </div>
+      <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/491096337_1285913716650338_7957871150269254200_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGvhzLkAQYSP3pMHri1kSnpLQKku6gJ_8otAqS7qAn_ytEAOqEFicai_x2aHs_W-olhJv3GvrZlSxBhaR1We3c7&_nc_ohc=C51uFejYURIQ7kNvwEVby-z&_nc_oc=AdknxR77nywJDIknnGw_PpUtobGfKiNqDlO6fVBhe5hsh5vecLHaHFkjVZ2keJrR606dbaFuhcaSaedzXHdapm1G&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=NK8j3KodLKR0_Rmg-6xdcg&oh=00_AfR2QjCv24oIUNEfdHKw0jlhLzCtBt1Q2WWjow9pslMvXQ&oe=68805C0C" alt="Vestido 4">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/490915637_1285913803316996_1835480906693365319_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH2O-H5c0ex7q2mUy5yUpE049n-tlbodGPj2f62Vuh0Y6wi9ienDc8woDvWll6oNuiAhh6XyQ1hVKQaUtfOco7l&_nc_ohc=7tWlIn3jGUEQ7kNvwF29T4H&_nc_oc=AdnrVzLHisgvulFMf2Zz3jB8Hq-y7ADjzGv0kTCl_Ykf1pjM86vkeZmDtjf9Yc86vN-Aah9w3moyZeo4ucYMHSBr&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=wuGkmS7VB___5NZwQSLZ-A&oh=00_AfTArIhgFo6O0la-e1VtgPX_KjqUvMj0-1ieqBu45jE0LA&oe=68805C18" alt="Vestido 4">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/490951544_1285913786650331_7831567268332445182_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHoXpth5Nc329evG7ndllQiY9VB0ReuSgtj1UHRF65KCwTJ0G9m11q326j8xkHPfY-8-GMIm0dIJ9-1YntLM70U&_nc_ohc=bwQdoJwA7i8Q7kNvwGni_V9&_nc_oc=Adm7Q1fdW2BmYZrhRJgK3cw9xq5ZVFl6rj-qEq7rRQ8CZH0m729bXuuoMw41iZ96fKBrORf4w25Tu02m8sIy8zBB&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=wItqet6ogNGH5dc3_30Ykg&oh=00_AfQ7xDoRuUW6Q-mzPuhkM-0DS6sHKsvXuYgMyfOPHjq_zg&oe=68804569" alt="Vestido 4">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/490476623_1284528000122243_5267716461004328205_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFMki_xBpkmFzt6iDWbYyFUqdaXQ-zTbQyp1pdD7NNtDLiT2UfHGpTt54XmDLYCbFOWMEbnv8cniZ8flwxOE6w0&_nc_ohc=eiohaC9KJ28Q7kNvwGJpdow&_nc_oc=AdnoywVLmRtya2pCIXX9fDId0eWL6D7COjHFtgDNZnexS2BfviR7w3zF4P5UGXP3fObSNpxwjme9N4CoX5B8ejtB&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=D9uTQEt-dbpR-zmssPGYUw&oh=00_AfSXz0D-GMj8mJjAzs__4g-Rf3htXHEti_e2be-Z09aD3w&oe=68804342" alt="Vestido 4">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/490827388_1284528023455574_666479152763210944_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHXpsRwbWHtFFfoUJAGrCO4ou32iC_Xi82i7faIL9eLzaGUsK7-WDeCXM6PF3jiILrznueE7C9EbPLxVajhT2uo&_nc_ohc=H47qI6w35REQ7kNvwE276DV&_nc_oc=AdmKpKNHdcjx-RxBRjYg2uDF4uO7Khdy5bR6NvnLmlYoeLzSzC9NRMKoSiQo05rfoHhbeJCK00hMI5FQOmHcEh3Q&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=D9uTQEt-dbpR-zmssPGYUw&oh=00_AfQxv26FZNz5JNcHllFvLo0-ifmGHpvT67SNaGgrilgmNg&oe=68805249" alt="Vestido 4">
+    </div>
+       <!-- <div class="marco">
+      <img src="" alt="Vestido 4">
+    </div> -->
+  </section>
+
+  <div style="text-align: center;">
+    <a class="volver" href="producto.html">← Volver a categorías</a>
+  </div>
+
+  <footer>
+    HERLIZ CONFECCIONES | confecciones.herliz@gmail.com | 📞 963 382 211<br>
+    Jr. Gamarra N° 1010 - 2do. Piso Tienda 205 – Gamarra – La Victoria
+  </footer>
+
+</body>
+</html>

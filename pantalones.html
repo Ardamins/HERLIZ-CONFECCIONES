@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PANTALONES | Herliz Confecciones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(135deg, #3F51B5, #E91E63);
+      color: white;
+      padding-top: 100px;
+      padding-bottom: 60px;
+      overflow-x: hidden;
+      animation: fadeInBody 1.2s ease-out;
+    }
+
+    @keyframes fadeInBody {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 999;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 10px 5px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      scrollbar-width: none;
+      animation: slideDown 0.8s ease-in-out;
+    }
+
+    .menu::-webkit-scrollbar {
+      display: none;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .boton {
+      flex: 0 0 auto;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid #fdd835;
+      padding: 10px 18px;
+      margin: 6px;
+      font-size: 1em;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .boton:hover {
+      background: #fdd835;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      animation: fadeInHeader 1s ease-in;
+    }
+
+    @keyframes fadeInHeader {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px #00000070;
+    }
+
+    .descripcion {
+      max-width: 800px;
+      margin: 20px auto;
+      background: rgba(255,255,255,0.1);
+      padding: 20px 30px;
+      border-radius: 15px;
+      line-height: 1.7em;
+      box-shadow: 0 0 12px rgba(255,255,255,0.2);
+      animation: fadeInSection 1s ease-in-out;
+    }
+
+    @keyframes fadeInSection {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .descripcion h2 {
+      color: #FFEB3B;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .descripcion ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .descripcion li::before {
+      content: "👖 ";
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+      animation: fadeInGallery 1s ease-in-out;
+    }
+
+    @keyframes fadeInGallery {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .marco {
+      background: rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .marco:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(255,255,255,0.4);
+    }
+
+    .marco img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(255,255,255,0.3);
+      transition: 0.3s ease;
+    }
+
+    .marco img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    }
+
+    .volver {
+      display: block;
+      text-align: center;
+      margin: 50px auto 0;
+      background-color: white;
+      color: #E91E63;
+      padding: 12px 30px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+      width: max-content;
+    }
+
+    .volver:hover {
+      background-color: #E91E63;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: rgba(0,0,0,0.2);
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 0.9em;
+      margin-top: 50px;
+      animation: fadeInFooter 1s ease-in-out;
+    }
+
+    @keyframes fadeInFooter {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu">
+    <a class="boton" href="producto.html">🏠 INICIO</a>
+    <a class="boton" href="polos.html">POLOS</a>
+    <a class="boton" href="pantalones.html">PANTALONES</a>
+    <a class="boton" href="chalecos.html">CHALECOS</a>
+    <a class="boton" href="mamelucos.html">MAMELUCOS</a>
+    <a class="boton" href="gorros.html">GORROS</a>
+    <a class="boton" href="camisa.html">CAMISAS</a>
+    <a class="boton" href="casacas.html">CASACAS</a>
+    <a class="boton" href="mochilas.html">MOCHILAS</a>
+    <a class="boton" href="mandiles.html">MANDILES</a>
+    <a class="boton" href="bolsos.html">BOLSOS</a>
+    <a class="boton" href="vestidos.html">TRAJES</a>
+    <a class="boton" href="nosotros.html">NOSOTROS</a>
+    <a class="boton" href="contactos.html">CONTACTOS</a>
+  </div>
+
+  <header>
+    <h1>PANTALONES</h1>
+  </header>
+
+  <section class="descripcion">
+    <h2>👖 Modelos disponibles:</h2>
+    <ul>
+      <li>Pantalón en jean</li>
+      <li>Pantalón en drill Nuevo Mundo con cinta reflectiva 3M</li>
+      <li>Pantalón en drill tecnología</li>
+      <li>Modelo clásico</li>
+      <li>Con cinta reflectiva 3M</li>
+    </ul>
+  </section>
+  </section>
+
+  <section class="galeria">
+    <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/492200415_1295352602373116_7455475770506997758_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFZzaLiJnclPmGnHyJLKkKLBk7qDYSH_PEGTuoNhIf88ZWRJ3W0OI-zTE1z-0jSNNsBYcQVIcitVVIo5frGbGkQ&_nc_ohc=ToYv6nBi6TgQ7kNvwHkGWHM&_nc_oc=Adk6Z6m-VfG12JJ87z-IhiKdPL9a8x0kS4oPfG68iWpDHnIPX-zM7wIZDuThxTR5BVE&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=R_OtVMv31REXfhcoOFRMAA&oh=00_AfTLQaP-Wpec_HMpS4oCohYSz-pootaL5M6iFxzfx-Df1g&oe=687E11C5" alt="Pantalón 1">
+    </div>
+    <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/492527845_1294059579169085_8701386793056999074_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFNeWCHa6wTZv5ifwy8ugpy465p3g6beVXjrmneDpt5VZNQv9v7vsU_bo6N4HP83KetiS-zXUA3Z0i4krGF11mu&_nc_ohc=EDAfjFW1JacQ7kNvwGCilge&_nc_oc=AdkjdlpLH-aDMWeVk0MH2ux-IGjQv9Ohe9D7byXYfF1rTLQ6JhtS7oeOehRWEj1g7m4&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=IrEPqmYnzK8sqlPIlxuHMw&oh=00_AfQqc8zKnfGXkjDFq1sBgxQcRzDGhmVPZ8IFPbqRvwKTVA&oe=687E33CB" alt="Pantalón 2">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/491949712_1286768333231543_6299741144914870733_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFNodfKYhJ53ItKRPOB5gmgsvJxx2ed_8my8nHHZ53_yWZZiZEo3EaWQwit8_E978VMwC5UMW_qwj3H1o14GWGe&_nc_ohc=I9CZGxV-dVAQ7kNvwFvI9Lo&_nc_oc=AdkQolKK-x6smigT_R92SmLyIyjooVQaSHcnPIN4G54nLkwfp90W4ko-tEFAasWKBl4&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=uYbJ7BMEXxavxHDWJ4OSyQ&oh=00_AfRj03mlMbUck2x-xYnhqJsB9UdXpOWT7rnMAnQJkLaL-Q&oe=687E429A" alt="Pantalón 2">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/491093527_1286041746637535_1609497950023610774_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFWFgXamaklmQNAWf8o7gYaJdZcnjZ-4mkl1lyeNn7iabnp5QBrY6-_1kIoinAM-I1qZhMxMYg88jWjkdcsxqgZ&_nc_ohc=lCfyDO6E5hcQ7kNvwHJgfYD&_nc_oc=AdllYJR8ikfJ4OKZPklIDPOrlRyIThutHw8rwytkFZuCvZFEtS8TelvidTWir2ngCMk&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=bZMY28S6j12rVFZsH4CYlw&oh=00_AfS6pHbLR0lDNEAXZz7K_EZ7vVScooaB9aSX9fQSTrgJFg&oe=687E228D" alt="Pantalón 2">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/490692606_1284694333438943_2260033938058697831_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGcWgoMg7bG07_avuUwX8sHqVC2mReqrT-pULaZF6qtPxPYP3mnKW8XH6iMzLtUMXEl-LVE8-r5W41kVsqjar4Q&_nc_ohc=v8LSpHMVtIYQ7kNvwFWxRzN&_nc_oc=AdkOZzVZoPyX0zdBPuF3HRlVF245dSt2uF78m7qW-nmitVCSfUNQ3wOQpTsWr5ZaJJo&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=rMEvWK1bRWBoaoOuTHGHlg&oh=00_AfT627qYT4AHhOx9NQHIVFvzkwttsgyRMO3uzI-xMp5tPg&oe=687E3670" alt="Pantalón 2">
+    </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t39.30808-6/486193671_1266108731964170_2472908323962074125_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEcza-ZQdGuW7-QgluhTxjCF8fHog2zd_gXx8eiDbN3-Ik7_Ugi-Mdh_l4GuUO_ru2vPaI842uEtwWsNinJKSGK&_nc_ohc=IxCwLM7XUdoQ7kNvwHBdf1S&_nc_oc=AdlE5HN5eeo8QZw9KJbjuJ9lXyLQRTEwFZ0tiTt9OtLMzWt6rfZiVyyBQmbcdZhBgFw&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=k5SZErqztKcgQMEOswts4w&oh=00_AfTLlN40LTeQ-g8JIGQ_b-6o9aOaQhTG0duc8XUPtMebaw&oe=687E2640" alt="Pantalón 2">
+    </div>
+     </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t39.30808-6/484832923_9358762434220328_7919344721426553739_n.jpg?stp=c0.89.1080.1080a_dst-jpg_s206x206_tt6&_nc_cat=103&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeHCJrTo2Oglx08Dqxp0JQsngsLaHXv6EHuCwtode_oQe6gPNHZJ6Z_GLVhAtsninpVFc6IT7f3ePDnogs7cv5Km&_nc_ohc=Y9dUQG1IGiwQ7kNvwG2StJ0&_nc_oc=AdnsWZ8_nxf1DZlykuQf493eZeHopjZvlfLauTsl0uOJBrF10UNyuG3p98hwy93yTLXQM4gw-yJal9oKHoZeAQi8&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=GPvd0HAQ92e9HOJDFGqW3A&oh=00_AfRqU-Ec4EkFqQ25g_b7BHhL0VoHDU84K4LWCKrRYP5L2Q&oe=68806650" alt="Pantalón 2">
+    </div>
+     </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-1.fna.fbcdn.net/v/t1.6435-9/163001326_3769865156443445_950833511774351978_n.jpg?stp=c0.143.528.528a_dst-jpg_s206x206_tt6&_nc_cat=103&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeFzp_RfK5-esxFki4PYM3mZ1l4jWePXOLbWXiNZ49c4tjVAG6VsC6LeT_2IG7hXyBXf1JtdOFNRYvTsP6GvjzJp&_nc_ohc=V5K5wIYXq-8Q7kNvwEwT0XI&_nc_oc=AdnKRzlrXDs2Cecz_HZR4nix2HeyXYi2MmgEfU0BH6BTGqcIdoKeqVCWi2RlrOHwsfJT1SvMVBTXhRO4eHWHgguc&_nc_zt=23&_nc_ht=scontent.flim1-1.fna&_nc_gid=PtPHSITwZDYLeQxd21DPdQ&oh=00_AfTvRGuBr8_AenTHFCnoP7UZGZV-tl4V32pTGTziiChI1Q&oe=68A21F31" alt="Pantalón 2">
+    </div>
+     </div>
+     <div class="marco">
+      <img src="https://scontent.flim1-2.fna.fbcdn.net/v/t1.6435-9/154961407_3705159886247306_6330584355269921641_n.jpg?stp=c0.143.528.528a_dst-jpg_s206x206_tt6&_nc_cat=110&ccb=1-7&_nc_sid=50ad20&_nc_eui2=AeHphg3icV_gC53Gk8PU2lHEkiaXEEAkaA6SJpcQQCRoDnzX3v073U90ZNPI-uc4zXjzDAYWtseIFLShsKCHTkOS&_nc_ohc=tOcAj2WOKEcQ7kNvwH78wNS&_nc_oc=AdkwdS-r3Ayq03dZ-LlDZu6BB3b002pqqSAF2WwFcXrLdYM1fHCpxDR7Tpt6GKordGJUZfaENAAQ8BksOo6wdywY&_nc_zt=23&_nc_ht=scontent.flim1-2.fna&_nc_gid=Qu5uvg0S0RJxNxgXdXtk2g&oh=00_AfTMmttxP575nmEdqzEG7cEQ1NJVT0jo2iaPAZEDEmJgxg&oe=68A207DE" alt="Pantalón 2">
+    </div>
+     <!-- </div>
+     <div class="marco">
+      <img src="" alt="Pantalón 2">
+    </div> -->
+  </section>
+
+  <div style="text-align: center;">
+    <a class="volver" href="producto.html">← Volver a categorías</a>
+  </div>
+
+  <footer>
+    HERLIZ CONFECCIONES | confecciones.herliz@gmail.com | 📞 963 382 211
+    <br>
+    Jr. Gamarra N° 1010 - 2do. Piso Tienda 205 – Gamarra – La Victoria
+  </footer>
+
+</body>
+</html>
